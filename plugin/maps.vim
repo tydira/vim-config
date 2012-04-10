@@ -1,3 +1,5 @@
+let mapleader = ','
+
 " Reload all buffers
 cmap eall windo e
 
@@ -46,9 +48,3 @@ nnoremap <leader>s I/* <Esc>
 nnoremap <leader>e A */<Esc>
 nnoremap <leader><leader>s :s/\/\* //<CR>
 nnoremap <leader><leader>e :s/ \*\///<CR>
-
-" Turns on/off cursorcolumn
-""MapToggle <leader>c cursorcolumn
-
-" Allow easy disabling of long lines highlights
-""map <leader>l <Esc>:call ToggleLongLinesHi()<CR>

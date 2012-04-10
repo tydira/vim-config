@@ -1,3 +1,5 @@
+let mapleader = ','
+
 " No crummy backup/swap files for me
 set nobackup
 set noswapfile
@@ -82,9 +84,6 @@ set smartcase
 " Indent folding
 set foldmethod=indent
 set foldlevel=99
-
-" The key to lead all (custom)keys
-let mapleader = ','
 
 " Bridge vim and system clipboards
 set clipboard=unnamed
