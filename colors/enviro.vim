@@ -31,7 +31,7 @@ hi PmenuSbar        ctermfg=black       ctermbg=none        cterm=none
 
 hi ErrorMsg         ctermfg=red         ctermbg=none        cterm=none
 hi WarningMsg       ctermfg=red         ctermbg=none        cterm=none
-hi LongLineWarning  ctermfg=none        ctermbg=none	      cterm=underline
+hi LongLineWarning  ctermfg=none        ctermbg=none        cterm=underline
 
 hi ModeMsg          ctermfg=black       ctermbg=none        cterm=bold
 hi CursorLine       ctermfg=none        ctermbg=none        cterm=bold
@@ -39,7 +39,7 @@ hi CursorColumn     ctermfg=none        ctermbg=none        cterm=bold
 hi MatchParen       ctermfg=red         ctermbg=none        cterm=bold
 hi Pmenu            ctermfg=black       ctermbg=none        cterm=none
 hi PmenuSel         ctermfg=white       ctermbg=none        cterm=none
-hi Search           ctermfg=none        ctermbg=none	      cterm=underline
+hi Search           ctermfg=none        ctermbg=none        cterm=underline
 hi IncSearch        ctermfg=none        ctermbg=none        cterm=reverse 
 
 hi Error            ctermfg=red         ctermbg=none        cterm=none
