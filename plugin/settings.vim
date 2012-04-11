@@ -1,4 +1,11 @@
-let mapleader = ','
+" Use tree-style directory listings
+let g:netrw_liststyle=0
+
+" Get rid of the obnoxious underline
+let g:netrw_cursorline=0
+
+" Disable netrw history
+let g:netrw_dirhistmax=0
 
 " No crummy backup/swap files for me
 set nobackup
@@ -60,15 +67,6 @@ set cursorline
 " Always display file location
 set ruler
 
-" Use tree-style directory listings
-let g:netrw_liststyle=0
-
-" Get rid of the obnoxious underline
-let g:netrw_cursorline=0
-
-" Disable netrw history
-let g:netrw_dirhistmax=0
-
 " Bash-style tab completion
 set wildmode=longest:full
 set wildmenu
@@ -87,6 +85,3 @@ set foldlevel=99
 
 " Bridge vim and system clipboards
 set clipboard=unnamed
-
-" Prevent pastes from fuglification
-set pastetoggle=<leader>p

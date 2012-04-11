@@ -1,5 +1,8 @@
 let mapleader = ','
 
+" Prevent pastes from fuglification
+set pastetoggle=<leader>p
+
 " Reload all buffers
 cmap eall windo e
 
