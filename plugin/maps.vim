@@ -25,6 +25,9 @@ vnoremap <leader>= :Align
 " Convenient key for Gundo
 noremap <leader>h :GundoToggle<CR>
 
+" Convenient key for Gundo
+noremap <leader>f :NERDTreeToggle<CR>
+
 " Tabs maps
 noremap <C-t> :tabnew 
 noremap <C-p> :tabprev<CR>

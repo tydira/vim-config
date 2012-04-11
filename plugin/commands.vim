@@ -1,9 +1,9 @@
+let mapleader = ','
+
 command WQ wq
 command Wq wq
 command W w
 command Q q
-
-let mapleader = ','
 
 " Easy toggle maps
 function MapToggle(key, opt)
