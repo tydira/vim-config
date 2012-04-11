@@ -1,11 +1,10 @@
-" Use tree-style directory listings
-let g:netrw_liststyle=0
-
-" Get rid of the obnoxious underline
-let g:netrw_cursorline=0
-
-" Disable netrw history
-let g:netrw_dirhistmax=0
+" NERDTree
+let NERDTreeMinimalUI=1
+let NERDTreeHighlightCursorline=1
+let NERDTreeMouseMode=2
+let NERDTreeMapOpenVSplit='v'
+let NERDTreeMapOpenSplit='s'
+let NERDTreeIgnore=['\.pyc$']
 
 " No crummy backup/swap files for me
 set nobackup
@@ -14,10 +13,10 @@ set noswapfile
 " Don't update the screen during macros
 set lazyredraw
 
-" Extend the history
+" Persistent history
 set history=1000
 set undolevels=1000
-set undoreload=10000
+set undoreload=1000
 set undodir=~/.vim/.undodir
 set undofile
 
@@ -44,6 +43,13 @@ syntax on
 " Forget word wrapping
 set nowrap
 
+" Though I rarely use it, it's still occasionally nice
+set mouse=a
+
+" Make edge scrolling more friendly
+set scrolloff=6
+set sidescrolloff=6
+
 " Tabs
 set tabstop=2
 set shiftwidth=2
@@ -51,9 +57,6 @@ set autoindent
 set copyindent
 set expandtab
 set smarttab
-
-" Session options
-set sessionoptions+=blank,buffers,curdir,folds,globals,help,localoptions,options,resize,tabpages
 
 " Attempt to get equal-sized splits
 set equalalways 

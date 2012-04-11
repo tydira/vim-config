@@ -4,10 +4,13 @@ let mapleader = ','
 set pastetoggle=<leader>p
 
 " Reload all buffers
-cmap eall windo e
+cnoreabbrev eall windo e
 
-" Change directory to the focused file's pwd
-cmap cdc lcd %:p:h
+" Change directory to the focused file's parent
+cnoreabbrev cdc lcd %:p:h
+
+" Vertical manuals are more helpful
+cnoreabbrev help vert help
 
 " Shout louder for root
 cmap w!! w !sudo tee % >/dev/null
@@ -22,11 +25,12 @@ noremap <leader>/ :let @/ = ""<CR>
 " Easy alignment based on symbols
 vnoremap <leader>= :Align 
 
-" Convenient key for Gundo
+" Convenient bind for Gundo
 noremap <leader>h :GundoToggle<CR>
 
-" Convenient key for Gundo
+" Convenient binds for NERDTree
 noremap <leader>f :NERDTreeToggle<CR>
+noremap <leader>F :NERDTree %<CR>
 
 " Tabs maps
 noremap <C-t> :tabnew 
@@ -44,13 +48,3 @@ noremap <C-j> 10j
 noremap <C-k> 10k
 noremap ; ^
 noremap ' $
-
-" Input maps
-inoremap /** /**<CR><Space>*<Space><CR>*/<Esc>kA
-inoremap /*<Space> /*<Space><Space>*/<Esc>hhi
-
-" Comment maps
-nnoremap <leader>s I/* <Esc>
-nnoremap <leader>e A */<Esc>
-nnoremap <leader><leader>s :s/\/\* //<CR>
-nnoremap <leader><leader>e :s/ \*\///<CR>
