@@ -30,7 +30,7 @@ noremap <leader>h :GundoToggle<CR>
 
 " Convenient binds for NERDTree
 noremap <leader>f :NERDTreeToggle<CR>
-noremap <leader>F :NERDTree %<CR>
+noremap <leader>F :NERDTree 
 
 " Tabs maps
 noremap <C-t> :tabnew 
@@ -43,8 +43,7 @@ noremap <C-w>s :split
 noremap <C-w>o :split 
 
 " Movement maps
-noremap <C-h> <Home>
-noremap <C-j> 10j
-noremap <C-k> 10k
 noremap ; ^
 noremap ' $
+noremap <C-j> 10j
+noremap <C-k> 10k
