@@ -9,9 +9,6 @@ cnoreabbrev eall windo e
 " Change directory to the focused file's parent
 cnoreabbrev cdc lcd %:p:h
 
-" Vertical manuals are more helpful
-cnoreabbrev help vert help
-
 " Shout louder for root
 cmap w!! w !sudo tee % >/dev/null
 
@@ -30,7 +27,7 @@ noremap <leader>h :GundoToggle<CR>
 
 " Convenient binds for NERDTree
 noremap <leader>f :NERDTreeToggle<CR>
-noremap <leader>F :NERDTree 
+noremap <leader>F :NERDTree %
 
 " Tabs maps
 noremap <C-t> :tabnew 
