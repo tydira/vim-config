@@ -43,9 +43,6 @@ syntax on
 " Forget word wrapping
 set nowrap
 
-" Though I rarely use it, it's still occasionally nice
-set mouse=a
-
 " Make edge scrolling more friendly
 set scrolloff=6
 set sidescrolloff=6
