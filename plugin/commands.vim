@@ -28,3 +28,20 @@ function ToggleLongLineHi()
 endfunction
 
 map <leader>l <Esc>:call ToggleLongLineHi()<CR>
+
+" Toggle mouse functionality
+function ToggleMouse()
+    if exists("b:togglemouse") && b:togglemouse
+        highlight clear LongLines
+        set mouse=
+        let b:togglemouse = 0
+    else
+        highlight LongLines ctermfg=red cterm=underline
+        match LongLines /\%80v.\+/
+        set mouse=a
+        let b:togglemouse = 1
+    endif
+endfunction
+
+call ToggleMouse()
+map <leader>m <Esc>:call ToggleMouse()<CR>
