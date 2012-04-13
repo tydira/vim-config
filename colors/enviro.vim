@@ -44,7 +44,7 @@ hi IncSearch        ctermfg=none        ctermbg=none        cterm=reverse
 
 hi Error            ctermfg=red         ctermbg=none        cterm=none
 hi Comment          ctermfg=darkgray    ctermbg=none        cterm=none
-hi String           ctermfg=green       ctermbg=none        cterm=none
+hi String           ctermfg=lightgreen  ctermbg=none        cterm=none
 hi Number           ctermfg=white       ctermbg=none        cterm=none
 
 hi Keyword          ctermfg=blue        ctermbg=none        cterm=none
