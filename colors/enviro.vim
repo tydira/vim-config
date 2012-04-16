@@ -38,7 +38,7 @@ hi CursorLine       ctermfg=none        ctermbg=none        cterm=bold
 hi CursorColumn     ctermfg=none        ctermbg=none        cterm=bold
 hi MatchParen       ctermfg=red         ctermbg=none        cterm=bold
 hi Pmenu            ctermfg=black       ctermbg=none        cterm=none
-hi PmenuSel         ctermfg=white       ctermbg=none        cterm=none
+hi PmenuSel         ctermfg=green       ctermbg=none        cterm=none
 hi Search           ctermfg=none        ctermbg=none        cterm=underline
 hi IncSearch        ctermfg=none        ctermbg=none        cterm=reverse 
 
@@ -62,6 +62,10 @@ hi Statement        ctermfg=lightblue   ctermbg=none        cterm=none
 hi Special          ctermfg=white       ctermbg=none        cterm=none
 hi Delimiter        ctermfg=cyan        ctermbg=none        cterm=none
 hi Operator         ctermfg=white       ctermbg=none        cterm=none
+
+hi DiffAdd          ctermfg=black       ctermbg=blue        cterm=none
+hi DiffChange       ctermfg=black       ctermbg=red         cterm=none
+hi DiffDelete       ctermfg=black       ctermbg=yellow      cterm=none
 
 hi link Character          Constant
 hi link Boolean            Constant
