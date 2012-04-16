@@ -2,9 +2,18 @@
 let NERDTreeMinimalUI=1
 let NERDTreeHighlightCursorline=1
 let NERDTreeMouseMode=2
+let NERDTreeIgnore=['\.pyc$']
 let NERDTreeMapOpenVSplit='v'
 let NERDTreeMapOpenSplit='s'
-let NERDTreeIgnore=['\.pyc$']
+let NERDTreeMapHelp='h'
+let NERDTreeMapUpdirKeepOpen='_'
+
+" Beef up completions
+let g:SuperTabDefaultCompletionType='<c-n>'
+let g:SuperTabLongestHighlight=1
+let g:acp_behaviorKeywordLength=1
+let g:acp_behaviorFileLength=1
+let g:acp_behaviorSnipmateLength=2
 
 " No crummy backup/swap files for me
 set nobackup
