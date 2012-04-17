@@ -12,7 +12,7 @@ cnoreabbrev cdc lcd %:p:h
 " Shout louder for root
 cmap w!! w !sudo tee % >/dev/null
 
-" Make space also useful for creating, opening and closing folds
+" Space to fold and unfold
 nnoremap <space> za
 vnoremap <space> zf
 

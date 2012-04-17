@@ -32,7 +32,7 @@ map <leader>l <Esc>:call ToggleLongLineHi()<CR>
 " Toggle mouse functionality
 function ToggleMouse()
     if exists("b:togglemouse") && b:togglemouse
-        set mouse=''
+        set mouse=""
         let b:togglemouse = 0
     else
         set mouse=a
