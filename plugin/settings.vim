@@ -1,8 +1,8 @@
 " Beef up completions
 let g:SuperTabDefaultCompletionType='<c-n>'
 let g:SuperTabLongestHighlight=1
-let g:acp_behaviorKeywordLength=1
-let g:acp_behaviorFileLength=1
+let g:acp_behaviorKeywordLength=2
+let g:acp_behaviorFileLength=2
 let g:acp_behaviorSnipmateLength=2
 
 " NERDTree
@@ -13,6 +13,7 @@ let NERDTreeIgnore=['\.pyc$']
 let NERDTreeMapOpenVSplit='v'
 let NERDTreeMapOpenSplit='s'
 let NERDTreeMapHelp='h'
+let NERDTreeMapUpdir='-'
 let NERDTreeMapUpdirKeepOpen='_'
 
 " No crummy backup/swap files for me
