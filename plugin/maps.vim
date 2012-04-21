@@ -3,44 +3,47 @@ let mapleader = ','
 " Prevent pastes from fuglification
 set pastetoggle=<leader>p
 
-" Reload all buffers
-cnoreabbrev eall windo e
+" I prefer vertical help most of the time
+cnorea help vert help
+cnorea hhelp help
 
-" Change directory to the focused file's parent
-cnoreabbrev cdc lcd %:p:h
+" Reload all buffers
+cnorea eall windo e
 
 " Shout louder for root
-cmap w!! w !sudo tee % >/dev/null
+cm w!! w !sudo tee % >/dev/null
 
 " Space to fold and unfold
-nnoremap <space> za
-vnoremap <space> zf
+nn <space> za
+vm <space> zf
 
 " Reset hlsearch
-noremap <leader>/ :let @/ = ""<CR>
+nn <leader>/ :let @/ = ""<CR>
 
-" Easy alignment based on symbols
-vnoremap <leader>= :Align 
+" Write a sessionfile
+nn <leader>w :mks!<CR>
 
-" Convenient bind for Gundo
-noremap <leader>h :GundoToggle<CR>
+" Toggle Gundo
+nn <leader>h :GundoToggle<CR>
 
-" Convenient binds for NERDTree
-noremap <leader>f :NERDTreeToggle<CR>
-noremap <leader>F :NERDTree %
+" NERDTree display
+nn <leader>f :NERDTreeToggle<CR>
+nn <leader>F :NERDTree %
 
 " Tabs maps
-noremap <C-t> :tabnew 
-noremap <C-p> :tabprev<CR>
-noremap <C-n> :tabnext<CR>
+nn <C-t> :tabnew 
+nn <C-p> :tabprev<CR>
+nn <C-n> :tabnext<CR>
+nn <silent> <leader>tn :execute 'silent! tabmove ' . tabpagenr()<CR>
+nn <silent> <leader>tp :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 
 " Split maps
-noremap <C-w>v :vsplit 
-noremap <C-w>s :split 
-noremap <C-w>o :split 
+nn <C-w>v :vsplit 
+nn <C-w>s :split 
+nn <C-w>o :split 
 
 " Movement maps
-noremap ; ^
-noremap ' $
-noremap <C-j> 10j
-noremap <C-k> 10k
+nn ; ^
+nn ' $
+nn <C-j> 10j
+nn <C-k> 10k
