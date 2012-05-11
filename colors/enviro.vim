@@ -14,7 +14,7 @@ hi Cursor           ctermfg=none        ctermbg=none        cterm=reverse
 hi LineNr           ctermfg=none        ctermbg=none        cterm=none
 
 hi VertSplit        ctermfg=black       ctermbg=none        cterm=none
-hi StatusLine       ctermfg=white       ctermbg=none        cterm=none
+hi StatusLine       ctermfg=lightgreen  ctermbg=none        cterm=bold
 hi StatusLineNC     ctermfg=black       ctermbg=none        cterm=none
 hi TabLineFill      ctermfg=none        ctermbg=none        cterm=none
 hi TabLine          ctermfg=black       ctermbg=none        cterm=none
