@@ -1,7 +1,7 @@
 " Beef up completions
-let g:SuperTabDefaultCompletionType='<c-n>'
-let g:SuperTabLongestHighlight=1
-let g:acp_behaviorKeywordLength=2
+let g:SuperTabDefaultCompletionType='<C-n>'
+let g:acp_behaviorKeywordLength=1
+let g:acp_behaviorFileLength=3
 let g:acp_behaviorFileLength=2
 let g:acp_behaviorSnipmateLength=2
 
@@ -37,6 +37,7 @@ set ffs=unix,dos,mac
 set backspace=indent,eol,start
 
 " Enable filetype plugins
+filetype on
 filetype plugin on
 
 " Encode documents in UTF-8

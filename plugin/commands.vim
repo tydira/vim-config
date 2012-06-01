@@ -1,17 +1,16 @@
 let mapleader = ','
 
-command WQ wq
-command Wq wq
-command W w
-command Q q
+com WQ wq
+com Wq wq
+com W w
+com Q q
 
 " Easy toggle maps
 function MapToggle(key, opt)
   let cmd = ':set '.a:opt.'! \| set '.a:opt."?\<CR>"
-  exec 'nnoremap '.a:key.' '.cmd
-  ""exec 'inoremap '.a:key." \<C-O>".cmd
+  exec 'nn'.a:key.' '.cmd
 endfunction
-command -nargs=+ MapToggle call MapToggle(<f-args>)
+com -nargs=+ MapToggle call MapToggle(<f-args>)
 
 MapToggle <leader>c cursorcolumn
 
@@ -22,7 +21,7 @@ function ToggleLongLineHi()
         let b:overlengthhi = 0
     else
         highlight LongLines ctermfg=red cterm=underline
-        match LongLines /\%80v.\+/
+        match LongLines /\%79v.\+/
         let b:overlengthhi = 1
     endif
 endfunction
