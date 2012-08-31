@@ -93,6 +93,3 @@ set smartcase
 " Indent folding
 set foldmethod=indent
 set foldlevel=99
-
-" Bridge vim and system clipboards
-set clipboard=unnamed
