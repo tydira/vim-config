@@ -1,21 +1,3 @@
-" Beef up completions
-let g:SuperTabDefaultCompletionType='<C-n>'
-let g:acp_behaviorKeywordLength=1
-let g:acp_behaviorFileLength=3
-let g:acp_behaviorFileLength=2
-let g:acp_behaviorSnipmateLength=2
-
-" NERDTree
-let NERDTreeMinimalUI=1
-let NERDTreeHighlightCursorline=1
-let NERDTreeMouseMode=2
-let NERDTreeIgnore=['\.pyc$']
-let NERDTreeMapOpenVSplit='v'
-let NERDTreeMapOpenSplit='s'
-let NERDTreeMapHelp='h'
-let NERDTreeMapUpdir='-'
-let NERDTreeMapUpdirKeepOpen='_'
-
 " No crummy backup/swap files for me
 set nobackup
 set noswapfile
@@ -93,3 +75,18 @@ set smartcase
 " Indent folding
 set foldmethod=indent
 set foldlevel=99
+
+" Beef up completions
+let g:SuperTabDefaultCompletionType='<C-n>'
+let g:SuperTabLongestEnhanced=1
+
+" NERDTree
+let NERDTreeMinimalUI=1
+let NERDTreeHighlightCursorline=1
+let NERDTreeMouseMode=2
+let NERDTreeIgnore=['\.pyc$']
+let NERDTreeMapOpenVSplit='v'
+let NERDTreeMapOpenSplit='s'
+let NERDTreeMapHelp='h'
+let NERDTreeMapUpdir='-'
+let NERDTreeMapUpdirKeepOpen='_'
