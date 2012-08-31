@@ -76,6 +76,9 @@ set smartcase
 set foldmethod=indent
 set foldlevel=99
 
+" Improve vim's default completion
+set completeopt=menu,longest,preview
+
 " Beef up completions
 let g:SuperTabDefaultCompletionType='<C-n>'
 let g:SuperTabLongestEnhanced=1
@@ -90,3 +93,4 @@ let NERDTreeMapOpenSplit='s'
 let NERDTreeMapHelp='h'
 let NERDTreeMapUpdir='-'
 let NERDTreeMapUpdirKeepOpen='_'
+let NERDTreeWinSize=26
