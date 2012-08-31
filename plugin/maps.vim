@@ -30,19 +30,19 @@ no <leader>u :GundoToggle<CR>
 no <leader>f :NERDTreeToggle<CR>
 no <leader>F :NERDTree %
 
-" Tabs maps
+" Tabs
 no <C-t> :tabnew 
 no <C-p> :tabprev<CR>
 no <C-n> :tabnext<CR>
 no <silent> <leader>tn :execute 'silent! tabmove ' . tabpagenr()<CR>
 no <silent> <leader>tp :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 
-" Split maps
+" Split
 no <C-w>v :vsplit 
 no <C-w>s :split 
 no <C-w>o :split 
 
-" Movement maps
+" Movement
 no ; ^
 no ' $
 no <C-h> <Home>
