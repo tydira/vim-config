@@ -46,8 +46,6 @@ no <C-w>o :split
 no ; ^
 no ' $
 no <C-h> <Home>
-no <C-j> 10j
-no <C-k> 10k
 
 " Fugitive
 no <leader>gc :Gcommit % -m ""<Left>
