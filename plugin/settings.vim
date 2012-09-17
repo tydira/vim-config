@@ -76,6 +76,9 @@ set smartcase
 set foldmethod=indent
 set foldlevel=99
 
+" There's a space at the end of this line!
+set fillchars=vert:\ 
+
 " Improve vim's default completion
 set completeopt=menu,longest,preview
 
