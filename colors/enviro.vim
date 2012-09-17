@@ -55,7 +55,7 @@ hi Todo             ctermfg=red         ctermbg=none        cterm=none
 hi Constant         ctermfg=cyan        ctermbg=none        cterm=none
 
 hi Identifier       ctermfg=cyan        ctermbg=none        cterm=none
-hi Function         ctermfg=brown       ctermbg=none        cterm=none
+hi Function         ctermfg=lightgreen  ctermbg=none        cterm=none
 hi Type             ctermfg=yellow      ctermbg=none        cterm=none
 hi Statement        ctermfg=lightblue   ctermbg=none        cterm=none
 
