@@ -21,7 +21,7 @@ vm <space> zf
 no <leader>/ :let @/ = ""<CR>
 
 " Write a sessionfile
-no <leader>w :mks!<CR>
+no <leader>w :mks! .Session.vim<CR>
 
 " Toggle Gundo
 no <leader>u :GundoToggle<CR>
@@ -49,3 +49,7 @@ no <C-h> <Home>
 
 " Fugitive
 no <leader>gc :Gcommit % -m ""<Left>
+
+" Turn on automake
+no <leader>m :au BufWritePost <buffer> make
+
