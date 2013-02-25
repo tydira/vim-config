@@ -12,4 +12,4 @@ Requirements
 Installation
 ------------
 
-See [Kroogs/vim-config](https://github.com/Kroogs/vim-config) for an example of its use.
+See [Kroogs/vim-setup](https://github.com/Kroogs/vim-setup) for an example of its use.
