@@ -52,7 +52,9 @@ no <leader>m :au BufWritePost <buffer> make
 
 " Fugitive
 no <leader>gc :Gcommit % -m ""<Left>
+no <leader>gd :Gdiff<CR>
+no <leader>gs :Gstatus<CR>
 
 " CtrlP
-no <leader>p :CtrlP
+no <leader>p :CtrlP<CR>
 
