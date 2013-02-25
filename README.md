@@ -1,4 +1,4 @@
-vim-kroogs
+Kroogs/vim-kroogs
 ==========
 
 This is my spiffy Vim bundle.  It's geared for general editing and development and includes settings, maps, commands and colors.
