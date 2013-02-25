@@ -1,7 +1,7 @@
 let mapleader = ','
 
 " Prevent pastes from fuglification
-set pastetoggle=<leader>p
+set pastetoggle=<leader>i
 
 " I prefer vertical help most of the time
 cnorea help vert help
@@ -47,9 +47,12 @@ no ; ^
 no ' $
 no <C-h> <Home>
 
+" Turn on automake
+no <leader>m :au BufWritePost <buffer> make
+
 " Fugitive
 no <leader>gc :Gcommit % -m ""<Left>
 
-" Turn on automake
-no <leader>m :au BufWritePost <buffer> make
+" CtrlP
+no <leader>p :CtrlP
 
