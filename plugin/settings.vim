@@ -63,6 +63,7 @@ set ruler
 " Bash-style tab completion
 set wildmode=longest:full
 set wildmenu
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
 " Show-as-you-go search
 set incsearch
