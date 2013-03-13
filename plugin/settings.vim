@@ -27,8 +27,8 @@ set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 
-" Set the default term to ANSI
-set term=builtin_ansi
+" Set the default term to ANSI | Breaks mouse support!?
+" set term=builtin_ansi
 
 " Styles
 colorscheme enviro
@@ -99,4 +99,6 @@ let NERDTreeMapOpenSplit='s'
 let NERDTreeMapHelp='h'
 let NERDTreeMapUpdir='-'
 let NERDTreeMapUpdirKeepOpen='_'
-let NERDTreeWinSize=26
+let NERDTreeWinSize=22
+
+let g:slime_target = 'tmux'
