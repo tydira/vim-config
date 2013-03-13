@@ -27,9 +27,6 @@ set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 
-" Set the default term to ANSI | Breaks mouse support!?
-" set term=builtin_ansi
-
 " Styles
 colorscheme enviro
 
