@@ -1,8 +1,8 @@
 " All hail leader Comma
-let mapleader = ','
+let mapleader= ','
 
 " Store the path to the kroogs bundle plugin
-let $KROOGS = expand('<sfile>:p:h')
+let $KROOGS=expand('<sfile>:p:h')
 
 " Prevent pastes from fuglification
 set pastetoggle=<leader>i
@@ -23,7 +23,7 @@ no <leader>vk :tabnew $KROOGS<CR>
 no <leader>vr :so $MYVIMRC<CR>
 
 " Reset hlsearch
-no <leader>/ :let @/ = ""<CR>
+no <leader>/ :let @/=''<CR>
 
 " Write a sessionfile
 no <leader>w :mks! .Session.vim<CR>
