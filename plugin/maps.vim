@@ -13,10 +13,6 @@ cnorea eall windo e
 " Shout louder for root
 cm w!! w !sudo tee % >/dev/null
 
-" Space to fold and unfold
-nn <space> za
-vm <space> zf
-
 " Reset hlsearch
 no <leader>/ :let @/ = ""<CR>
 
