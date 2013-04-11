@@ -83,10 +83,6 @@ set fillchars=vert:\
 " Improve vim's default completion
 set completeopt=menu,longest,preview
 
-" Beef up completions
-let g:SuperTabDefaultCompletionType='<C-n>'
-let g:SuperTabLongestEnhanced=1
-
 " NERDTree
 let NERDTreeMinimalUI=1
 let NERDTreeHighlightCursorline=1
