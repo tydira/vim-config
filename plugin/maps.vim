@@ -8,8 +8,9 @@ let $KROOGS=expand('<sfile>:p:h')
 set pastetoggle=<leader>i
 
 " I prefer vertical help most of the time
-cnorea help vert help
-cnorea hhelp help
+cnorea h tab help
+cnorea vh vert help
+cnorea hh help
 
 " Reload all buffers
 cnorea eall windo e
@@ -60,5 +61,4 @@ no <leader>gd :Gdiff<CR>
 no <leader>gs :Gstatus<CR>
 
 " CtrlP
-no <leader>p :CtrlP<CR>
-
+let g:ctrlp_map = '<leader>p'
