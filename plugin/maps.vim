@@ -1,4 +1,8 @@
+" All hail leader Comma
 let mapleader = ','
+
+" Store the path to the kroogs bundle plugin
+let $KROOGS = expand('<sfile>:p:h')
 
 " Prevent pastes from fuglification
 set pastetoggle=<leader>i
@@ -12,6 +16,11 @@ cnorea eall windo e
 
 " Shout louder for root
 cm w!! w !sudo tee % >/dev/null
+
+" Quick config access
+no <leader>vc :tabnew $MYVIMRC<CR>
+no <leader>vk :tabnew $KROOGS<CR>
+no <leader>vr :so $MYVIMRC<CR>
 
 " Reset hlsearch
 no <leader>/ :let @/ = ""<CR>
