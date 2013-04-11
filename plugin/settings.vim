@@ -77,7 +77,7 @@ set smartcase
 set foldmethod=indent
 set foldlevel=99
 
-" There's a space at the end of this line!
+" There's a space at the end of the next line!
 set fillchars=vert:\ 
 
 " Improve vim's default completion
