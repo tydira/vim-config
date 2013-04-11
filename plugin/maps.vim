@@ -40,7 +40,6 @@ no <silent> <leader>tp :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 " Split
 no <C-w>v :vsplit 
 no <C-w>s :split 
-no <C-w>o :split 
 
 " Movement
 no ; ^
