@@ -12,6 +12,10 @@ set undoreload=1000
 set undodir=~/.vim/.undodir
 set undofile
 
+" More natural feeling splits
+set splitbelow
+set splitright
+
 " Default file types
 set ffs=unix,dos,mac
 
