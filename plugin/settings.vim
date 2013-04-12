@@ -95,4 +95,5 @@ let NERDTreeMapUpdir='-'
 let NERDTreeMapUpdirKeepOpen='_'
 let NERDTreeWinSize=22
 
+" Setup a multiplexer target for slime
 let g:slime_target = 'tmux'
