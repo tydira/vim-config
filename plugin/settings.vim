@@ -97,3 +97,6 @@ let NERDTreeWinSize=22
 
 " Setup a multiplexer target for slime
 let g:slime_target = 'tmux'
+
+" Close the YCM preview window after we return to normal mode
+let g:ycm_autoclose_preview_window_after_insertion = 1
