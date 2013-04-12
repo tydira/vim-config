@@ -20,7 +20,7 @@ set backspace=indent,eol,start
 
 " Enable filetype plugins
 filetype on
-filetype plugin on
+filetype plugin indent on
 
 " Encode documents in UTF-8
 set enc=utf-8
