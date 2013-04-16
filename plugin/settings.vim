@@ -77,10 +77,6 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" Indent folding
-set foldmethod=indent
-set foldlevel=99
-
 " There's a space at the end of the next line!
 set fillchars=vert:\ 
 
@@ -101,6 +97,9 @@ let NERDTreeWinSize=22
 
 " Setup a multiplexer target for slime
 let g:slime_target = 'tmux'
+
+" Have CtrlP ignore this in addition to the wildignore option
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Close the YCM preview window after we return to normal mode
 let g:ycm_autoclose_preview_window_after_insertion = 1
