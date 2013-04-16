@@ -65,7 +65,7 @@ set cursorline
 set ruler
 
 " Bash-style tab completion
-set wildmode=longest:full
+set wildmode=longest,full
 set wildmenu
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
