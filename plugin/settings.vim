@@ -9,7 +9,7 @@ set lazyredraw
 set history=1000
 set undolevels=1000
 set undoreload=1000
-set undodir=~/.vim/.undodir
+set undodir=~/.vim/undodir
 set undofile
 
 " More natural feeling splits
@@ -41,7 +41,7 @@ syntax on
 set nowrap
 
 " Make edge scrolling more friendly
-set scrolloff=6
+set scrolloff=18
 set sidescrolloff=6
 
 " Tabs
@@ -99,7 +99,11 @@ let NERDTreeWinSize=22
 let g:slime_target = 'tmux'
 
 " Have CtrlP ignore this in addition to the wildignore option
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_max_height=6
+let g:ctrlp_use_caching=1
+let g:ctrlp_clear_cache_on_exit=0
+let g:ctrlp_cache_dir='~/.vim/ctrlp_cache'
 
 " Close the YCM preview window after we return to normal mode
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_insertion=1
