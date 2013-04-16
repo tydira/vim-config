@@ -61,4 +61,5 @@ no <leader>gd :Gdiff<CR>
 no <leader>gs :Gstatus<CR>
 
 " CtrlP
-let g:ctrlp_map = '<leader>p'
+let g:ctrlp_map='<leader>`'
+no <leader>~ :CtrlPClearCache<CR>:CtrlP<CR>
