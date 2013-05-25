@@ -9,7 +9,7 @@ set lazyredraw
 set history=1000
 set undolevels=1000
 set undoreload=1000
-set undodir=~/.vim/undodir
+set undodir=~/.vim/tmp/undo
 set undofile
 
 " More natural feeling splits
@@ -24,7 +24,7 @@ set backspace=indent,eol,start
 
 " Enable filetype plugins
 filetype on
-filetype plugin indent on
+filetype plugin on
 
 " Encode documents in UTF-8
 set enc=utf-8
@@ -61,9 +61,6 @@ set showmatch
 " Looks good with just =bold
 set cursorline
 
-" Always display file location
-set ruler
-
 " Bash-style tab completion
 set wildmode=longest,full
 set wildmenu
@@ -83,6 +80,9 @@ set fillchars=vert:\
 " Improve vim's default completion
 set completeopt=menu,longest,preview
 
+" Don't show modes
+set noshowmode
+
 " NERDTree
 let NERDTreeMinimalUI=1
 let NERDTreeHighlightCursorline=1
@@ -94,16 +94,34 @@ let NERDTreeMapHelp='h'
 let NERDTreeMapUpdir='-'
 let NERDTreeMapUpdirKeepOpen='_'
 let NERDTreeWinSize=22
+let NERDTreeStatusline='File Tree'
 
 " Setup a multiplexer target for slime
-let g:slime_target = 'tmux'
+let g:slime_target='tmux'
 
 " Have CtrlP ignore this in addition to the wildignore option
 let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_max_height=6
 let g:ctrlp_use_caching=1
 let g:ctrlp_clear_cache_on_exit=0
-let g:ctrlp_cache_dir='~/.vim/ctrlp_cache'
+let g:ctrlp_cache_dir='~/.vim/tmp/ctrlp'
+
+" Make CtrlP use git's cache to index project files (very fast)
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+  \ },
+  \ 'fallback': 'find %s -type f'
+\ }
+
 
 " Close the YCM preview window after we return to normal mode
 let g:ycm_autoclose_preview_window_after_insertion=1
+
+let g:gitgutter_sign_added='+'
+let g:gitgutter_sign_modified='~'
+let g:gitgutter_sign_removed='-'
+let g:gitgutter_sign_modified_removed='~'
+let g:gitgutter_enabled=0
+let g:gitgutter_eager=0
