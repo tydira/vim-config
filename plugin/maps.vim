@@ -19,6 +19,7 @@ cnorea eall windo e
 cm w!! w !sudo tee % >/dev/null
 
 " Quick config access
+no <leader>vv :tabnew $VIMRUNTIME<CR>
 no <leader>vc :tabnew $MYVIMRC<CR>
 no <leader>vk :tabnew $KROOGS<CR>
 no <leader>vr :so $MYVIMRC<CR>
