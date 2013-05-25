@@ -11,14 +11,17 @@ hi Normal           ctermfg=none        ctermbg=none        cterm=none
 hi NonText          ctermfg=black       ctermbg=none        cterm=none
 
 hi Cursor           ctermfg=none        ctermbg=none        cterm=reverse
-hi LineNr           ctermfg=none        ctermbg=none        cterm=none
-
+hi LineNr           ctermfg=black       ctermbg=none        cterm=none
 hi VertSplit        ctermfg=black       ctermbg=none        cterm=none
-hi StatusLine       ctermfg=lightgreen  ctermbg=none        cterm=bold
+
+hi StatusLine       ctermfg=green       ctermbg=none        cterm=bold
 hi StatusLineNC     ctermfg=black       ctermbg=none        cterm=none
+
 hi TabLineFill      ctermfg=none        ctermbg=none        cterm=none
-hi TabLine          ctermfg=black       ctermbg=none        cterm=none
-hi TabLineSel       ctermfg=lightgreen  ctermbg=none        cterm=bold
+hi TabLineSel       ctermfg=green       ctermbg=none        cterm=bold
+hi TabNumSel        ctermfg=green       ctermbg=none        cterm=bold
+hi TabLine          ctermfg=black       ctermbg=none        cterm=bold
+hi TabNum           ctermfg=black       ctermbg=none        cterm=bold
 
 hi Folded           ctermfg=none        ctermbg=none        cterm=none
 hi Title            ctermfg=none        ctermbg=none        cterm=none
@@ -43,8 +46,8 @@ hi Search           ctermfg=none        ctermbg=none        cterm=underline
 hi IncSearch        ctermfg=none        ctermbg=none        cterm=reverse 
 
 hi Error            ctermfg=red         ctermbg=none        cterm=none
-hi Comment          ctermfg=darkgray    ctermbg=none        cterm=none
-hi String           ctermfg=lightgreen  ctermbg=none        cterm=none
+hi Comment          ctermfg=black       ctermbg=none        cterm=none
+hi String           ctermfg=green       ctermbg=none        cterm=none
 hi Number           ctermfg=white       ctermbg=none        cterm=none
 
 hi Keyword          ctermfg=blue        ctermbg=none        cterm=none
@@ -52,20 +55,33 @@ hi PreProc          ctermfg=blue        ctermbg=none        cterm=none
 hi Conditional      ctermfg=blue        ctermbg=none        cterm=none
 
 hi Todo             ctermfg=red         ctermbg=none        cterm=none
-hi Constant         ctermfg=cyan        ctermbg=none        cterm=none
+hi Constant         ctermfg=magenta     ctermbg=none        cterm=none
 
-hi Identifier       ctermfg=cyan        ctermbg=none        cterm=none
-hi Function         ctermfg=lightgreen  ctermbg=none        cterm=none
-hi Type             ctermfg=yellow      ctermbg=none        cterm=none
-hi Statement        ctermfg=lightblue   ctermbg=none        cterm=none
+hi Identifier       ctermfg=magenta     ctermbg=none        cterm=none
+hi Function         ctermfg=green       ctermbg=none        cterm=none
+hi Type             ctermfg=green      ctermbg=none        cterm=none
+hi Statement        ctermfg=blue        ctermbg=none        cterm=none
+hi Directory        ctermfg=blue        ctermbg=none        cterm=none
 
 hi Special          ctermfg=white       ctermbg=none        cterm=none
-hi Delimiter        ctermfg=cyan        ctermbg=none        cterm=none
+hi Delimiter        ctermfg=magenta     ctermbg=none        cterm=none
 hi Operator         ctermfg=white       ctermbg=none        cterm=none
 
 hi DiffAdd          ctermfg=black       ctermbg=blue        cterm=none
 hi DiffChange       ctermfg=black       ctermbg=red         cterm=none
 hi DiffDelete       ctermfg=black       ctermbg=yellow      cterm=none
+
+hi SignColumn       ctermfg=none        ctermbg=none        cterm=none
+
+hi CtrlPNoEntries   ctermfg=black       ctermbg=none        cterm=none
+hi CtrlPMatch       ctermfg=green       ctermbg=none        cterm=bold
+hi CtrlPLinePre     ctermfg=black       ctermbg=none        cterm=none
+hi CtrlPPrtBase     ctermfg=black       ctermbg=none        cterm=none
+hi CtrlPPrtText     ctermfg=white       ctermbg=none        cterm=bold
+hi CtrlPPrtCursor   ctermfg=white       ctermbg=none        cterm=none
+hi CtrlPMode1       ctermfg=black       ctermbg=none        cterm=none
+hi CtrlPMode2       ctermfg=black       ctermbg=none        cterm=none
+hi CtrlPStats       ctermfg=black       ctermbg=none        cterm=none
 
 hi link Character          Constant
 hi link Boolean            Constant
@@ -94,3 +110,6 @@ hi link htmlTagName        Conditional
 hi link htmlEndTag         Identifier 
 
 hi link javaScriptNumber   Number 
+
+hi EasyMotionTarget ctermfg=green ctermbg=none 
+hi EasyMotionShade  ctermfg=black ctermbg=none 
