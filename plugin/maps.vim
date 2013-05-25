@@ -27,7 +27,7 @@ no <leader>vr :so $MYVIMRC<CR>
 no <leader>/ :let @/=''<CR>
 
 " Write a sessionfile
-no <leader>w :mks! .Session.vim<CR>
+no <leader>w :Obsession .Session.vim<CR>
 
 " Toggle Gundo
 no <leader>u :GundoToggle<CR>
@@ -48,9 +48,13 @@ no <C-w>v :vsplit
 no <C-w>s :split 
 
 " Movement
-no ; ^
-no ' $
-no <C-h> <Home>
+no <C-h> ^
+no <C-l> $
+no <C-j> }
+no <C-k> {
+
+" Easier way to leave insert mode
+ino <C-@> <Esc>
 
 " Turn on automake
 no <leader>m :au BufWritePost <buffer> make
@@ -60,6 +64,12 @@ no <leader>gc :Gcommit % -m ""<Left>
 no <leader>gd :Gdiff<CR>
 no <leader>gs :Gstatus<CR>
 
+" GitGutter
+no <leader>gg :GitGutterToggle<CR>
+
 " CtrlP
 let g:ctrlp_map='<leader>`'
 no <leader>~ :CtrlPClearCache<CR>:CtrlP<CR>
+
+" Leader for EasyMotion
+let g:EasyMotion_leader_key = "'"
