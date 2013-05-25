@@ -1,5 +1,5 @@
 " All hail leader Comma
-let mapleader= ','
+let mapleader=','
 
 " Store the path to the kroogs bundle plugin
 let $KROOGS=expand('<sfile>:p:h')
