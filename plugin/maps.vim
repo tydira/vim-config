@@ -49,6 +49,7 @@ no <C-w>v :vsplit
 no <C-w>s :split 
 
 " Movement
+no <C-g> <Home>
 no <C-h> ^
 no <C-l> $
 no <C-j> }
