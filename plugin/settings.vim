@@ -66,6 +66,9 @@ set wildmode=longest,full
 set wildmenu
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
+" Short messages, no intro text
+set shortmess+=aI
+
 " Show-as-you-go search
 set incsearch
 set hlsearch
