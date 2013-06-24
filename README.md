@@ -7,7 +7,7 @@ Requirements
 ------------
 
 - [Vim 7.3+](http://www.vim.org/)
-- [Pathogen](https://github.com/tpope/vim-pathogen)
+- [Vundle](https://github.com/gmarik/vundle) or [Pathogen](https://github.com/tpope/vim-pathogen)
 
 Installation
 ------------
