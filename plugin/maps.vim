@@ -62,12 +62,14 @@ ino <C-@> <Esc>
 no <leader>m :au BufWritePost <buffer> make
 
 " Fugitive
-no <leader>gc :Gcommit % -m ""<Left>
-no <leader>gd :Gdiff<CR>
-no <leader>gs :Gstatus<CR>
+no <leader>sc :Gcommit % -m ""<Left>
+no <leader>sd :Gdiff<CR>
+no <leader>st :Gstatus<CR>
 
 " GitGutter
-no <leader>gg :GitGutterToggle<CR>
+no <leader>sg :GitGutterToggle<CR>
+
+"no <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " CtrlP
 let g:ctrlp_map='<leader>`'
