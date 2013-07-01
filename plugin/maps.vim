@@ -24,14 +24,22 @@ no <leader>vc :tabnew $MYVIMRC<CR>
 no <leader>vk :tabnew $KROOGS<CR>
 no <leader>vr :so $MYVIMRC<CR>
 
-" Reset hlsearch
+" Reset search string
 no <leader>/ :let @/=''<CR>
 
 " Write a sessionfile
 no <leader>w :Obsession .Session.vim<CR>
 
 " Toggle Gundo
-no <leader>u :GundoToggle<CR>
+" no <leader>u :GundoToggle<CR>
+
+" Tabularize
+no <leader>tt :execute ':Tabularize /' . getline(".")[col(".")-1]<CR>
+no <leader>t= :Tabularize /=<CR>
+no <leader>t: :Tabularize /:<CR>
+no <leader>t:: :Tabularize /:\zs<CR>
+no <leader>t, :Tabularize /,<CR>
+no <leader>t<Bar> :Tabularize /<Bar><CR>
 
 " NERDTree display
 no <leader>f :NERDTreeToggle<CR>
