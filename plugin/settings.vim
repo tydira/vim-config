@@ -41,8 +41,8 @@ syntax on
 set nowrap
 
 " Make edge scrolling more friendly
-set scrolloff=18
-set sidescrolloff=6
+set scrolloff=3
+set sidescrolloff=3
 
 " Tabs
 set tabstop=2
@@ -121,6 +121,9 @@ let g:ctrlp_user_command = {
 
 " Close the YCM preview window after we return to normal mode
 let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_filetype_blacklist={}
+let g:ycm_complete_in_comments=1
+let g:ycm_complete_in_strings=1
 
 let g:gitgutter_sign_added='+'
 let g:gitgutter_sign_modified='~'
@@ -128,3 +131,6 @@ let g:gitgutter_sign_removed='-'
 let g:gitgutter_sign_modified_removed='~'
 let g:gitgutter_enabled=0
 let g:gitgutter_eager=0
+
+" Default the filetype to text
+autocmd BufEnter * if &filetype == "" | setlocal ft=txt | endif
