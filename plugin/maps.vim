@@ -18,6 +18,9 @@ cnorea eall windo e
 " Shout louder for root
 cm w!! w !sudo tee % >/dev/null
 
+" Toggle for line number display
+no <leader>l :set nu!<CR>
+
 " Quick config access
 no <leader>vv :tabnew $VIMRUNTIME<CR>
 no <leader>vc :tabnew $MYVIMRC<CR>
@@ -31,7 +34,7 @@ no <leader>/ :let @/=''<CR>
 no <leader>w :Obsession .Session.vim<CR>
 
 " Toggle Gundo
-" no <leader>u :GundoToggle<CR>
+no <leader>u :UndotreeToggle<CR>
 
 " Tabularize
 no <leader>tt :execute ':Tabularize /' . getline(".")[col(".")-1]<CR>
@@ -66,13 +69,14 @@ no <C-k> {
 " Easier way to leave insert mode
 ino <C-@> <Esc>
 
-" Turn on automake
-no <leader>m :au BufWritePost <buffer> make
+" Dispatch
+no <leader>M :Dispatch!<CR>
+no <leader>m :Dispatch<CR>
 
 " Fugitive
-no <leader>sc :Gcommit % -m ""<Left>
+no <leader>sc :Gcommit %<CR>
 no <leader>sd :Gdiff<CR>
-no <leader>st :Gstatus<CR>
+no <leader>ss :Gstatus<CR>
 
 " GitGutter
 no <leader>sg :GitGutterToggle<CR>
