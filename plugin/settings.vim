@@ -5,6 +5,9 @@ set noswapfile
 " Don't update the screen during macros
 set lazyredraw
 
+" Enable syntax highlighting
+syntax on
+
 " Persistent history
 set history=1000
 set undolevels=1000
@@ -19,13 +22,6 @@ set splitright
 " Default file types
 set ffs=unix,dos,mac
 
-" Fix backspace
-set backspace=indent,eol,start
-
-" Enable filetype plugins
-filetype on
-filetype plugin on
-
 " Encode documents in UTF-8
 set enc=utf-8
 set fenc=utf-8
@@ -34,23 +30,14 @@ set termencoding=utf-8
 " Styles
 colorscheme enviro
 
-" Enable syntax highlighting
-syntax on
-
 " Forget word wrapping
 set nowrap
-
-" Make edge scrolling more friendly
-set scrolloff=3
-set sidescrolloff=3
 
 " Tabs
 set tabstop=2
 set shiftwidth=2
-set autoindent
 set copyindent
 set expandtab
-set smarttab
 
 " Attempt to get equal-sized splits
 set equalalways 
@@ -63,14 +50,12 @@ set cursorline
 
 " Bash-style tab completion
 set wildmode=longest,full
-set wildmenu
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
 " Short messages, no intro text
 set shortmess+=aI
 
 " Show-as-you-go search
-set incsearch
 set hlsearch
 
 " Case-insensitive searches unless caps are used
