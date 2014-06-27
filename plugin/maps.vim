@@ -75,6 +75,7 @@ no <leader>m :Dispatch<CR>
 
 " Fugitive
 no <leader>sc :Gcommit %<CR>
+no <leader>sC :Gcommit<CR>
 no <leader>sd :Gdiff<CR>
 no <leader>ss :Gstatus<CR>
 

@@ -33,10 +33,11 @@ colorscheme enviro
 " Forget word wrapping
 set nowrap
 
-" Tabs
+" Indentation
 set tabstop=2
 set shiftwidth=2
 set copyindent
+set autoindent
 set expandtab
 
 " Attempt to get equal-sized splits
