@@ -78,6 +78,13 @@ no <leader>sc :Gcommit %<CR>
 no <leader>sC :Gcommit<CR>
 no <leader>sd :Gdiff<CR>
 no <leader>ss :Gstatus<CR>
+no <leader>sb :Gblame<CR>
+no <leader>se :Gedit<CR>
+no <leader>sw :Gwrite<CR>
+no <leader>sB :Gbrowse<CR>
+no <leader>sp :Git push<CR>
+no <leader>su :Git pull<CR>
+no <leader>sf :Git fetch<CR>
 
 " GitGutter
 no <leader>sg :GitGutterToggle<CR>
@@ -90,3 +97,8 @@ no <leader>~ :CtrlPClearCache<CR>:CtrlP<CR>
 
 " Leader for EasyMotion
 let g:EasyMotion_leader_key = "'"
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger = '<c-e>'
+let g:UltiSnipsJumpForwardTrigger = '<c-n>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-p>'
