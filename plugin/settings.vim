@@ -96,13 +96,13 @@ let g:ctrlp_clear_cache_on_exit=0
 let g:ctrlp_cache_dir='~/.vim/tmp/ctrlp'
 
 " Make CtrlP use git's cache to index project files (very fast)
-let g:ctrlp_user_command = {
-  \ 'types': {
-    \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
-    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-  \ },
-  \ 'fallback': 'find %s -type f'
-\ }
+" let g:ctrlp_user_command = {
+"   \ 'types': {
+"     \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+"     \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+"   \ },
+"   \ 'fallback': 'find %s -type f'
+" \ }
 
 
 " Close the YCM preview window after we return to normal mode

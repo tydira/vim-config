@@ -60,9 +60,6 @@ no <C-w>v :vsplit
 no <C-w>s :split 
 
 " Movement
-no <C-g> <Home>
-no <C-h> ^
-no <C-l> $
 no <C-j> }
 no <C-k> {
 
@@ -100,5 +97,3 @@ let g:EasyMotion_leader_key = "'"
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger = '<c-e>'
-let g:UltiSnipsJumpForwardTrigger = '<c-n>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-p>'
