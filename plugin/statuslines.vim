@@ -14,9 +14,6 @@ if exists("+showtabline")
             let s .= (i == t ? '%1*' : '%2*')
             let wn = tabpagewinnr(i,'$')
 
-            let s .= (i== t ? '%#TabNumSel#' : '%#TabNum#')
-            let s .= i
-            let s .= '/%*'
             let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
 
             let bufnr = buflist[winnr - 1]
@@ -60,7 +57,7 @@ endf
 " Argument: len
 "           a:1
 fu! CtrlP_Statusline_2(...)
-  let len = '%#Error# '.a:1.' %*'
-  let dir = ' %=%<%#Error# '.getcwd().' %*'
+  let len = '%#Comment# '.a:1.' %*'
+  let dir = ' %=%<%#Comment# '.getcwd().' %*'
   retu len.dir
 endf

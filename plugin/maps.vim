@@ -36,14 +36,6 @@ no <leader>w :Obsession .Session.vim<CR>
 " Toggle Gundo
 no <leader>u :UndotreeToggle<CR>
 
-" Tabularize
-no <leader>tt :execute ':Tabularize /' . getline(".")[col(".")-1]<CR>
-no <leader>t= :Tabularize /=<CR>
-no <leader>t: :Tabularize /:<CR>
-no <leader>t:: :Tabularize /:\zs<CR>
-no <leader>t, :Tabularize /,<CR>
-no <leader>t<Bar> :Tabularize /<Bar><CR>
-
 " NERDTree display
 no <leader>f :NERDTreeToggle<CR>
 no <leader>F :NERDTree %
@@ -60,6 +52,9 @@ no <C-w>v :vsplit
 no <C-w>s :split 
 
 " Movement
+no <C-g> <Home>
+no <C-h> ^
+no <C-l> $
 no <C-j> }
 no <C-k> {
 
@@ -86,11 +81,11 @@ no <leader>sf :Git fetch<CR>
 " GitGutter
 no <leader>sg :GitGutterToggle<CR>
 
-"no <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
 " CtrlP
 let g:ctrlp_map='<leader>`'
-no <leader>~ :CtrlPClearCache<CR>:CtrlP<CR>
+
+" Find word under cursor with :Ag
+no <leader>k :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Leader for EasyMotion
 let g:EasyMotion_leader_key = "'"

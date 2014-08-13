@@ -91,18 +91,16 @@ let g:slime_target='tmux'
 " Have CtrlP ignore this in addition to the wildignore option
 let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_max_height=6
-let g:ctrlp_use_caching=1
-let g:ctrlp_clear_cache_on_exit=0
-let g:ctrlp_cache_dir='~/.vim/tmp/ctrlp'
+let g:ctrlp_use_caching = 0
 
 " Make CtrlP use git's cache to index project files (very fast)
-" let g:ctrlp_user_command = {
-"   \ 'types': {
-"     \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
-"     \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-"   \ },
-"   \ 'fallback': 'find %s -type f'
-" \ }
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+  \ },
+  \ 'fallback': 'ag %s -l --nocolor -g ""'
+\ }
 
 
 " Close the YCM preview window after we return to normal mode
@@ -117,6 +115,10 @@ let g:gitgutter_sign_removed='-'
 let g:gitgutter_sign_modified_removed='~'
 let g:gitgutter_enabled=0
 let g:gitgutter_eager=0
+
+" Resize splits automatically
+autocmd VimResized * wincmd =
+autocmd TabEnter * wincmd =
 
 " Default the filetype to text
 autocmd BufEnter * if &filetype == "" | setlocal ft=txt | endif
