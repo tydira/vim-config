@@ -1,4 +1,8 @@
-ab : :=
+ab :: :=
+
+let g:go_fmt_command = "goimports"
+
+colorscheme goviro
 
 setlocal noexpandtab
 setlocal shiftwidth=2

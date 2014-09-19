@@ -31,7 +31,6 @@ hi Visual           ctermfg=none        ctermbg=none        cterm=reverse
 hi SpecialKey       ctermfg=none        ctermbg=none        cterm=none
 
 hi WildMenu         ctermfg=white       ctermbg=none        cterm=none
-hi PmenuSbar        ctermfg=black       ctermbg=none        cterm=none
 
 hi ErrorMsg         ctermfg=red         ctermbg=none        cterm=none
 hi WarningMsg       ctermfg=red         ctermbg=none        cterm=none
@@ -43,6 +42,8 @@ hi CursorColumn     ctermfg=none        ctermbg=none        cterm=bold
 hi MatchParen       ctermfg=red         ctermbg=none        cterm=bold
 hi Pmenu            ctermfg=black       ctermbg=none        cterm=none
 hi PmenuSel         ctermfg=green       ctermbg=none        cterm=none
+hi PmenuSbar        ctermfg=none        ctermbg=none        cterm=none
+hi PmenuThumb       ctermfg=none        ctermbg=black        cterm=none
 hi Search           ctermfg=none        ctermbg=none        cterm=underline
 hi IncSearch        ctermfg=none        ctermbg=none        cterm=reverse 
 
