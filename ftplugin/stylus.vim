@@ -1,3 +1,1 @@
-set cursorcolumn
-set tabstop=2
-set shiftwidth=2
+" autocmd BufEnter *.styl IndentGuidesEnable

@@ -11,6 +11,8 @@ hi Normal           ctermfg=none        ctermbg=none        cterm=none
 hi NonText          ctermfg=black       ctermbg=none        cterm=none
 
 hi Cursor           ctermfg=none        ctermbg=none        cterm=reverse
+hi CursorLine       ctermfg=none        ctermbg=black        cterm=bold
+hi CursorColumn     ctermfg=none        ctermbg=black        cterm=bold
 hi CursorLineNr     ctermfg=green       ctermbg=none        cterm=bold
 hi LineNr           ctermfg=black       ctermbg=none        cterm=none
 hi VertSplit        ctermfg=black       ctermbg=none        cterm=none
@@ -37,8 +39,6 @@ hi WarningMsg       ctermfg=red         ctermbg=none        cterm=none
 hi LongLineWarning  ctermfg=none        ctermbg=none        cterm=underline
 
 hi ModeMsg          ctermfg=black       ctermbg=none        cterm=bold
-hi CursorLine       ctermfg=none        ctermbg=none        cterm=bold
-hi CursorColumn     ctermfg=none        ctermbg=none        cterm=bold
 hi MatchParen       ctermfg=red         ctermbg=none        cterm=bold
 hi Pmenu            ctermfg=black       ctermbg=none        cterm=none
 hi PmenuSel         ctermfg=green       ctermbg=none        cterm=none

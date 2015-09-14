@@ -1,1 +1,1 @@
-set cursorcolumn
+" autocmd BufEnter *.jade IndentGuidesEnable

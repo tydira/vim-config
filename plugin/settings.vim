@@ -5,9 +5,6 @@ set noswapfile
 " Don't update the screen during macros
 set lazyredraw
 
-" Enable syntax highlighting
-syntax on
-
 " Persistent history
 set history=1000
 set undolevels=1000
@@ -19,6 +16,12 @@ set undofile
 set splitbelow
 set splitright
 
+" Enable basic folding
+set foldmethod=indent
+
+" Start with open folds.
+autocmd BufEnter * normal! zR
+
 " Default file types
 set ffs=unix,dos,mac
 
@@ -27,11 +30,14 @@ set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 
-" Styles
-colorscheme enviro
+" Use system clipboard
+set clipboard=unnamed
 
 " Forget word wrapping
 set nowrap
+
+" Enable mouse support
+set mouse=a
 
 " Indentation
 set tabstop=2
@@ -40,18 +46,20 @@ set copyindent
 set autoindent
 set expandtab
 
+" Interface stuff
+set background=dark
+colorscheme enviro
+syntax on
+
 " Attempt to get equal-sized splits
 set equalalways 
 
 " Show matching brace highlights
 set showmatch
 
-" Looks good with just =bold
-set cursorline
-
 " Bash-style tab completion
 set wildmode=longest,full
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,node_modules/*
 
 " Short messages, no intro text
 set shortmess+=aI
@@ -74,7 +82,7 @@ set noshowmode
 
 " NERDTree
 let NERDTreeMinimalUI=1
-let NERDTreeHighlightCursorline=1
+let NERDTreeHighlightCursorline=0
 let NERDTreeMouseMode=2
 let NERDTreeIgnore=['\.pyc$']
 let NERDTreeMapOpenVSplit='v'
@@ -82,7 +90,7 @@ let NERDTreeMapOpenSplit='s'
 let NERDTreeMapHelp='h'
 let NERDTreeMapUpdir='-'
 let NERDTreeMapUpdirKeepOpen='_'
-let NERDTreeWinSize=22
+let NERDTreeWinSize=21
 let NERDTreeStatusline='File Tree'
 
 " Setup a multiplexer target for slime
@@ -91,17 +99,20 @@ let g:slime_target='tmux'
 " Have CtrlP ignore this in addition to the wildignore option
 let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_max_height=6
-let g:ctrlp_use_caching = 0
+let g:ctrlp_use_caching=0
+
+" Change some vim-gist defaults
+let g:gist_open_browser_after_post=1
+let g:gist_post_private=1
 
 " Make CtrlP use git's cache to index project files (very fast)
-let g:ctrlp_user_command = {
+let g:ctrlp_user_command={
   \ 'types': {
     \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
     \ 2: ['.hg', 'hg --cwd %s locate -I .'],
   \ },
   \ 'fallback': 'ag %s -l --nocolor -g ""'
 \ }
-
 
 " Close the YCM preview window after we return to normal mode
 let g:ycm_autoclose_preview_window_after_insertion=1
@@ -122,3 +133,4 @@ autocmd TabEnter * wincmd =
 
 " Default the filetype to text
 autocmd BufEnter * if &filetype == "" | setlocal ft=txt | endif
+

@@ -15,6 +15,10 @@ cnorea hh help
 " Reload all buffers
 cnorea eall windo e
 
+" Fold toggles with space
+nno <Space> za
+vno <Space> za
+
 " Shout louder for root
 cm w!! w !sudo tee % >/dev/null
 

@@ -11,17 +11,20 @@ hi Normal           ctermfg=none        ctermbg=none        cterm=none
 hi NonText          ctermfg=black       ctermbg=none        cterm=none
 
 hi Cursor           ctermfg=none        ctermbg=none        cterm=reverse
-hi LineNr           ctermfg=black       ctermbg=none        cterm=none
-hi VertSplit        ctermfg=black       ctermbg=none        cterm=none
+hi CursorLine       ctermfg=none        ctermbg=none        cterm=none
+hi CursorColumn     ctermfg=none        ctermbg=none        cterm=none
+hi CursorLineNr     ctermfg=green       ctermbg=none        cterm=none
+hi LineNr           ctermfg=8       ctermbg=none        cterm=none
+hi VertSplit        ctermfg=8       ctermbg=none        cterm=none
 
-hi StatusLine       ctermfg=green       ctermbg=none        cterm=bold
-hi StatusLineNC     ctermfg=black       ctermbg=none        cterm=none
+hi StatusLine       ctermfg=green       ctermbg=none        cterm=none
+hi StatusLineNC     ctermfg=8       ctermbg=none        cterm=none
 
 hi TabLineFill      ctermfg=none        ctermbg=none        cterm=none
-hi TabLineSel       ctermfg=green       ctermbg=none        cterm=bold
-hi TabNumSel        ctermfg=green       ctermbg=none        cterm=bold
-hi TabLine          ctermfg=black       ctermbg=none        cterm=bold
-hi TabNum           ctermfg=black       ctermbg=none        cterm=bold
+hi TabLineSel       ctermfg=green       ctermbg=none        cterm=none
+hi TabNumSel        ctermfg=green       ctermbg=none        cterm=none
+hi TabLine          ctermfg=8       ctermbg=none        cterm=none
+hi TabNum           ctermfg=8       ctermbg=none        cterm=none
 
 hi Folded           ctermfg=none        ctermbg=none        cterm=none
 hi Title            ctermfg=none        ctermbg=none        cterm=none
@@ -30,23 +33,21 @@ hi Visual           ctermfg=none        ctermbg=none        cterm=reverse
 hi SpecialKey       ctermfg=none        ctermbg=none        cterm=none
 
 hi WildMenu         ctermfg=white       ctermbg=none        cterm=none
-hi PmenuSbar        ctermfg=black       ctermbg=none        cterm=none
+hi PmenuSbar        ctermfg=8       ctermbg=none        cterm=none
 
 hi ErrorMsg         ctermfg=red         ctermbg=none        cterm=none
 hi WarningMsg       ctermfg=red         ctermbg=none        cterm=none
 hi LongLineWarning  ctermfg=none        ctermbg=none        cterm=underline
 
-hi ModeMsg          ctermfg=black       ctermbg=none        cterm=bold
-hi CursorLine       ctermfg=none        ctermbg=none        cterm=bold
-hi CursorColumn     ctermfg=none        ctermbg=none        cterm=bold
-hi MatchParen       ctermfg=red         ctermbg=none        cterm=bold
-hi Pmenu            ctermfg=black       ctermbg=none        cterm=none
+hi ModeMsg          ctermfg=8       ctermbg=none        cterm=none
+hi MatchParen       ctermfg=red         ctermbg=none        cterm=none
+hi Pmenu            ctermfg=8       ctermbg=none        cterm=none
 hi PmenuSel         ctermfg=green       ctermbg=none        cterm=none
 hi Search           ctermfg=none        ctermbg=none        cterm=underline
 hi IncSearch        ctermfg=none        ctermbg=none        cterm=reverse 
 
 hi Error            ctermfg=red         ctermbg=none        cterm=none
-hi Comment          ctermfg=black       ctermbg=none        cterm=none
+hi Comment          ctermfg=8       ctermbg=none        cterm=none
 hi String           ctermfg=green       ctermbg=none        cterm=none
 hi Number           ctermfg=white       ctermbg=none        cterm=none
 
@@ -67,21 +68,21 @@ hi Special          ctermfg=white       ctermbg=none        cterm=none
 hi Delimiter        ctermfg=magenta     ctermbg=none        cterm=none
 hi Operator         ctermfg=white       ctermbg=none        cterm=none
 
-hi DiffAdd          ctermfg=black       ctermbg=blue        cterm=none
-hi DiffChange       ctermfg=black       ctermbg=red         cterm=none
-hi DiffDelete       ctermfg=black       ctermbg=yellow      cterm=none
+hi DiffAdd          ctermfg=8       ctermbg=blue        cterm=none
+hi DiffChange       ctermfg=8       ctermbg=red         cterm=none
+hi DiffDelete       ctermfg=8       ctermbg=yellow      cterm=none
 
 hi SignColumn       ctermfg=none        ctermbg=none        cterm=none
 
-hi CtrlPNoEntries   ctermfg=black       ctermbg=none        cterm=none
-hi CtrlPMatch       ctermfg=green       ctermbg=none        cterm=bold
-hi CtrlPLinePre     ctermfg=black       ctermbg=none        cterm=none
-hi CtrlPPrtBase     ctermfg=black       ctermbg=none        cterm=none
-hi CtrlPPrtText     ctermfg=white       ctermbg=none        cterm=bold
+hi CtrlPNoEntries   ctermfg=8       ctermbg=none        cterm=none
+hi CtrlPMatch       ctermfg=green       ctermbg=none        cterm=none
+hi CtrlPLinePre     ctermfg=8       ctermbg=none        cterm=none
+hi CtrlPPrtBase     ctermfg=8       ctermbg=none        cterm=none
+hi CtrlPPrtText     ctermfg=white       ctermbg=none        cterm=none
 hi CtrlPPrtCursor   ctermfg=white       ctermbg=none        cterm=none
-hi CtrlPMode1       ctermfg=black       ctermbg=none        cterm=none
-hi CtrlPMode2       ctermfg=black       ctermbg=none        cterm=none
-hi CtrlPStats       ctermfg=black       ctermbg=none        cterm=none
+hi CtrlPMode1       ctermfg=8       ctermbg=none        cterm=none
+hi CtrlPMode2       ctermfg=8       ctermbg=none        cterm=none
+hi CtrlPStats       ctermfg=8       ctermbg=none        cterm=none
 
 hi link Character          Constant
 hi link Boolean            Constant
@@ -112,4 +113,7 @@ hi link htmlEndTag         Identifier
 hi link javaScriptNumber   Number 
 
 hi EasyMotionTarget ctermfg=green ctermbg=none 
-hi EasyMotionShade  ctermfg=black ctermbg=none 
+hi EasyMotionShade  ctermfg=8 ctermbg=none 
+
+hi IndentGuidesOdd ctermfg=none ctermbg=none cterm=none
+hi IndentGuidesEven ctermfg=none ctermbg=black cterm=none

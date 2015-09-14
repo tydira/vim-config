@@ -1,4 +1,1 @@
-"au BufWritePost *.coffee silent CoffeeMake!
-set cursorcolumn
-set tabstop=2
-set shiftwidth=2
+" autocmd BufEnter *.coffee IndentGuidesEnable
