@@ -48,7 +48,7 @@ set expandtab
 
 " Interface stuff
 set background=dark
-colorscheme enviro
+colorscheme goshgolly
 syntax on
 
 " Attempt to get equal-sized splits
