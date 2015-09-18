@@ -4,9 +4,6 @@ let mapleader=','
 " Store the path to the kroogs bundle plugin
 let $KROOGS=expand('<sfile>:p:h')
 
-" Prevent pastes from fuglification
-set pastetoggle=<leader>i
-
 " I prefer vertical help most of the time
 cnorea h tab help
 cnorea vh vert help
@@ -48,8 +45,6 @@ no <leader>F :NERDTree %
 no <C-t> :tabnew 
 no <C-p> :tabprev<CR>
 no <C-n> :tabnext<CR>
-no <silent> <leader>tn :execute 'silent! tabmove ' . tabpagenr()<CR>
-no <silent> <leader>tp :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 
 " Split
 no <C-w>v :vsplit 
@@ -96,3 +91,10 @@ let g:EasyMotion_leader_key = "'"
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger = '<c-e>'
+
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc

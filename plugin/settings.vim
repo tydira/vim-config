@@ -17,10 +17,10 @@ set splitbelow
 set splitright
 
 " Enable basic folding
-set foldmethod=indent
+" set foldmethod=indent
 
 " Start with open folds.
-autocmd BufEnter * normal! zR
+" autocmd BufReadPost * normal! zR
 
 " Default file types
 set ffs=unix,dos,mac
@@ -91,7 +91,7 @@ let NERDTreeMapHelp='h'
 let NERDTreeMapUpdir='-'
 let NERDTreeMapUpdirKeepOpen='_'
 let NERDTreeWinSize=21
-let NERDTreeStatusline='File Tree'
+let NERDTreeStatusline='Files'
 
 " Setup a multiplexer target for slime
 let g:slime_target='tmux'
@@ -119,6 +119,13 @@ let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_filetype_blacklist={}
 let g:ycm_complete_in_comments=1
 let g:ycm_complete_in_strings=1
+let g:ycm_min_num_of_chars_for_completion=0
+let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_semantic_triggers={
+  \'javascript,typescript,python,go': ['.'],
+  \'ruby,coffee': ['.', '::']
+\}
 
 let g:gitgutter_sign_added='+'
 let g:gitgutter_sign_modified='~'
