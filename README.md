@@ -15,4 +15,4 @@ Installation
   1. Add `Plug 'kroogs/vim-goshgolly'` and `Plug 'kroogs/vim-kroogs'` to .vimrc
   2. Run `:PlugInstall`
 
-See [kroogs/vim-setup](https://github.com/kroogs/vim-setup) for an example of its use.
+See [kroogs/dotfiles](https://github.com/kroogs/dotfiles/blob/master/lib/.vim/vimrc) for an example of its use.
