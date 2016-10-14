@@ -26,12 +26,12 @@ set splitright
 set ffs=unix,dos,mac
 
 " Encode documents in UTF-8
-set enc=utf-8
-set fenc=utf-8
-set termencoding=utf-8
+" set enc=utf-8
+" set fenc=utf-8
+" set termencoding=utf-8
 
 " Use system clipboard
-set clipboard=unnamed
+" set clipboard=unnamed
 
 " Forget word wrapping
 set nowrap
@@ -54,8 +54,12 @@ syntax on
 " Attempt to get equal-sized splits
 set equalalways 
 
+" Highlight the cursor line when it's enabled
+set cursorline
+
 " Show matching brace highlights
 set showmatch
+set matchtime=0
 
 " Bash-style tab completion
 set wildmode=longest,full
@@ -75,7 +79,7 @@ set smartcase
 set fillchars=vert:\ 
 
 " Improve vim's default completion
-set completeopt=menu,longest,preview
+set completeopt=menu,longest
 
 " Don't show modes
 set noshowmode
@@ -93,17 +97,14 @@ let NERDTreeMapUpdirKeepOpen='_'
 let NERDTreeWinSize=21
 let NERDTreeStatusline='Files'
 
-" Setup a multiplexer target for slime
-let g:slime_target='tmux'
+" Change some vim-gist defaults
+let g:gist_open_browser_after_post=1
+let g:gist_post_private=1
 
 " Have CtrlP ignore this in addition to the wildignore option
 let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_max_height=6
 let g:ctrlp_use_caching=0
-
-" Change some vim-gist defaults
-let g:gist_open_browser_after_post=1
-let g:gist_post_private=1
 
 " Make CtrlP use git's cache to index project files (very fast)
 let g:ctrlp_user_command={
@@ -114,25 +115,13 @@ let g:ctrlp_user_command={
   \ 'fallback': 'ag %s -l --nocolor -g ""'
 \ }
 
-" Close the YCM preview window after we return to normal mode
-let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_filetype_blacklist={}
-let g:ycm_complete_in_comments=1
-let g:ycm_complete_in_strings=1
-let g:ycm_min_num_of_chars_for_completion=0
-let g:ycm_seed_identifiers_with_syntax=1
-let g:ycm_collect_identifiers_from_tags_files=1
-let g:ycm_semantic_triggers={
-  \'javascript,typescript,python,go': ['.'],
-  \'ruby,coffee': ['.', '::']
-\}
+let delimitMate_expand_space=1
+let delimitMate_expand_cr=2
 
-let g:gitgutter_sign_added='+'
-let g:gitgutter_sign_modified='~'
-let g:gitgutter_sign_removed='-'
-let g:gitgutter_sign_modified_removed='~'
-let g:gitgutter_enabled=0
-let g:gitgutter_eager=0
+let g:deoplete#enable_at_startup=1
+let g:tern_show_signature_in_pum='0'
+
+let g:vim_json_syntax_conceal=1
 
 " Resize splits automatically
 autocmd VimResized * wincmd =
@@ -140,4 +129,3 @@ autocmd TabEnter * wincmd =
 
 " Default the filetype to text
 autocmd BufEnter * if &filetype == "" | setlocal ft=txt | endif
-
