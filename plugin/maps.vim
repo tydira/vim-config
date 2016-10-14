@@ -55,17 +55,17 @@ no <C-k> {
 ino <C-@> <Esc>
 
 " Fugitive
-no <leader>sc :Gcommit %<CR>
-no <leader>sC :Gcommit<CR>
-no <leader>sd :Gdiff<CR>
-no <leader>ss :Gstatus<CR>
-no <leader>sb :Gblame<CR>
-no <leader>se :Gedit<CR>
-no <leader>sw :Gwrite<CR>
-no <leader>sB :Gbrowse<CR>
-no <leader>sp :Git push<CR>
-no <leader>su :Git pull<CR>
-no <leader>sf :Git fetch<CR>
+no <leader>gc :Gcommit %<CR>
+no <leader>gC :Gcommit<CR>
+no <leader>gd :Gdiff<CR>
+no <leader>gs :Gstatus<CR>
+no <leader>gb :Gblame<CR>
+no <leader>ge :Gedit<CR>
+no <leader>gw :Gwrite<CR>
+no <leader>gB :Gbrowse<CR>
+no <leader>gp :Git push<CR>
+no <leader>gu :Git pull<CR>
+no <leader>gf :Git fetch<CR>
 
 " CtrlP
 let g:ctrlp_map='<leader>`'
@@ -78,6 +78,8 @@ let g:EasyMotion_leader_key = "'"
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger = '<c-e>'
+
+no <leader>m :autocmd! BufWritePost * Neomake<CR>
 
 " Tab completion
 ino <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
