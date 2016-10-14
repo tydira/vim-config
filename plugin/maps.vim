@@ -1,7 +1,7 @@
 " All hail leader Comma
 let mapleader=','
 
-" Store the path to the kroogs bundle plugin
+" Store the path to the kroogs plugin
 let $KROOGS=expand('<sfile>:p:h')
 
 " I prefer vertical help most of the time
@@ -18,9 +18,6 @@ vno <Space> za
 
 " Shout louder for root
 cm w!! w !sudo tee % >/dev/null
-
-" Toggle for line number display
-no <leader>l :set nu!<CR>
 
 " Quick config access
 no <leader>vv :tabnew $VIMRUNTIME<CR>
@@ -51,18 +48,11 @@ no <C-w>v :vsplit
 no <C-w>s :split 
 
 " Movement
-no <C-g> <Home>
-no <C-h> ^
-no <C-l> $
 no <C-j> }
 no <C-k> {
 
 " Easier way to leave insert mode
 ino <C-@> <Esc>
-
-" Dispatch
-no <leader>M :Dispatch!<CR>
-no <leader>m :Dispatch<CR>
 
 " Fugitive
 no <leader>sc :Gcommit %<CR>
@@ -77,9 +67,6 @@ no <leader>sp :Git push<CR>
 no <leader>su :Git pull<CR>
 no <leader>sf :Git fetch<CR>
 
-" GitGutter
-no <leader>sg :GitGutterToggle<CR>
-
 " CtrlP
 let g:ctrlp_map='<leader>`'
 
@@ -92,9 +79,6 @@ let g:EasyMotion_leader_key = "'"
 " Ultisnips
 let g:UltiSnipsExpandTrigger = '<c-e>'
 
-function! SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
+" Tab completion
+ino <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+ino <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
