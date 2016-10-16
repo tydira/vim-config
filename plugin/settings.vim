@@ -26,9 +26,8 @@ set splitright
 set ffs=unix,dos,mac
 
 " Encode documents in UTF-8
-" set enc=utf-8
-" set fenc=utf-8
-" set termencoding=utf-8
+set fenc=utf-8
+set termencoding=utf-8
 
 " Use system clipboard
 " set clipboard=unnamed
@@ -122,6 +121,8 @@ let g:deoplete#enable_at_startup=1
 let g:tern_show_signature_in_pum='0'
 
 let g:vim_json_syntax_conceal=1
+
+let g:asterisk#keeppos=1
 
 " Resize splits automatically
 autocmd VimResized * wincmd =

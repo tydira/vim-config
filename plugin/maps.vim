@@ -16,9 +16,6 @@ cnorea eall windo e
 nno <Space> za
 vno <Space> za
 
-" Shout louder for root
-cm w!! w !sudo tee % >/dev/null
-
 " Quick config access
 no <leader>vv :tabnew $VIMRUNTIME<CR>
 no <leader>vc :tabnew $MYVIMRC<CR>
@@ -30,9 +27,6 @@ no <leader>/ :let @/=''<CR>
 
 " Write a sessionfile
 no <leader>w :Obsession .Session.vim<CR>
-
-" Toggle Gundo
-no <leader>u :UndotreeToggle<CR>
 
 " NERDTree display
 no <leader>f :NERDTreeToggle<CR>
@@ -80,6 +74,19 @@ let g:EasyMotion_leader_key = "'"
 let g:UltiSnipsExpandTrigger = '<c-e>'
 
 no <leader>m :autocmd! BufWritePost * Neomake<CR>
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+map *   <Plug>(asterisk-*)
+map #   <Plug>(asterisk-#)
+map g*  <Plug>(asterisk-g*)
+map g#  <Plug>(asterisk-g#)
+map z*  <Plug>(asterisk-z*)
+map gz* <Plug>(asterisk-gz*)
+map z#  <Plug>(asterisk-z#)
+map gz# <Plug>(asterisk-gz#)
 
 " Tab completion
 ino <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
