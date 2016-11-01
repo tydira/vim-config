@@ -44,9 +44,13 @@ no <C-w>s :split
 " Movement
 no <C-j> }
 no <C-k> {
+no <BS> ^
+no <C-l> $
 
-" Easier way to leave insert mode
+" Quicker escape
 ino <C-@> <Esc>
+vno <C-@> <Esc>
+cno <C-@> <C-c>
 
 " Fugitive
 no <leader>gc :Gcommit %<CR>
@@ -73,8 +77,6 @@ let g:EasyMotion_leader_key = "'"
 " Ultisnips
 let g:UltiSnipsExpandTrigger = '<c-e>'
 
-no <leader>m :autocmd! BufWritePost * Neomake<CR>
-
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -91,3 +93,14 @@ map gz# <Plug>(asterisk-gz#)
 " Tab completion
 ino <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 ino <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
+" Show syntax highlighting groups for word under cursor
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+no <leader>h :call <SID>SynStack()<CR>
+no <leader>hh :so $VIMRUNTIME/syntax/hitest.vim<CR>
