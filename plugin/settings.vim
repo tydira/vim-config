@@ -18,7 +18,7 @@ set splitbelow
 set splitright
 
 " Enable basic folding
-set foldmethod=syntax
+" set foldmethod=syntax
 
 " Start with open folds.
 autocmd BufReadPost * normal! zR
@@ -125,7 +125,7 @@ let delimitMate_expand_cr=2
 let g:deoplete#enable_at_startup=1
 let g:deoplete#auto_complete_delay=50
 let g:deoplete#auto_complete_start_length=3
-call deoplete#custom#set('_', 'matchers', ['matcher_head'])
+" call deoplete#custom#set('_', 'matchers', ['matcher_head'])
 
 let g:vim_json_syntax_conceal=1
 

@@ -12,9 +12,9 @@ cnorea hh help
 " Reload all buffers
 cnorea eall windo e
 
-" Fold toggles with space
-nno <Space> za
-vno <Space> za
+" " Fold toggles with space
+" nno <Space> za
+" vno <Space> za
 
 " Quick config access
 no <leader>vv :tabnew $VIMRUNTIME<CR>

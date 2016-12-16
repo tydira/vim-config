@@ -6,7 +6,7 @@ let g:neomake_javascript_jshint_maker = {
     \ }
 let g:neomake_javascript_enabled_makers = ['eslint']
 
-autocmd! BufWritePost *.js Neomake
+autocmd! BufWritePost *.js,*.jsx Neomake
 
 inoreab co const
 inoreab do document
