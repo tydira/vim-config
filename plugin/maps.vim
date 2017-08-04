@@ -44,13 +44,13 @@ no <C-w>s :split
 " Movement
 no <C-j> }
 no <C-k> {
-no <BS> ^
+no <C-h> ^
 no <C-l> $
 
 " Quicker escape
-ino <C-@> <Esc>
-vno <C-@> <Esc>
-cno <C-@> <C-c>
+ino <C-space> <Esc>
+vno <C-space> <Esc>
+cno <C-space> <C-c>
 
 " Fugitive
 no <leader>gc :Gcommit %<CR>
