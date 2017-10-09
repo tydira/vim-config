@@ -26,11 +26,13 @@ no <leader>vr :so $MYVIMRC<CR>
 no <leader>/ :let @/=''<CR>
 
 " Write a sessionfile
-no <leader>w :Obsession .Session.vim<CR>
+no <leader>w :Obsession Session.vim<CR>
 
 " NERDTree display
 no <leader>f :NERDTreeToggle<CR>
 no <leader>F :NERDTree %
+
+no <leader>s :Ag! <cword><CR>
 
 " Tabs
 no <C-t> :tabnew 
@@ -73,6 +75,12 @@ no <leader>k :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Leader for EasyMotion
 let g:EasyMotion_leader_key = "'"
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger = '<c-e>'
