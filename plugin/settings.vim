@@ -48,11 +48,12 @@ set expandtab
 
 " Interface stuff
 set background=dark
+set termguicolors
 colorscheme goshgolly
 syntax on
 
 " Attempt to get equal-sized splits
-set equalalways 
+" set equalalways 
 
 " Highlight the cursor line when it's enabled
 set cursorline
@@ -74,6 +75,9 @@ set shortmess+=aI
 
 " Show-as-you-go search
 set hlsearch
+
+" Show the result of commands as you type
+set inccommand=nosplit
 
 " Case-insensitive searches unless caps are used
 set ignorecase
@@ -123,8 +127,8 @@ let delimitMate_expand_space=1
 let delimitMate_expand_cr=2
 
 let g:deoplete#enable_at_startup=1
-let g:deoplete#auto_complete_delay=50
-let g:deoplete#auto_complete_start_length=3
+let g:deoplete#auto_complete_delay=0
+let g:deoplete#auto_complete_start_length=2
 " call deoplete#custom#set('_', 'matchers', ['matcher_head'])
 
 let g:vim_json_syntax_conceal=1
@@ -132,12 +136,6 @@ let g:vim_json_syntax_conceal=1
 let g:asterisk#keeppos=1
 
 let g:EasyMotion_smartcase=1
-
-" Neomake
-let g:neomake_error_sign = {'text': '✘', 'texthl': 'NeomakeErrorSign'}
-let g:neomake_warning_sign = {'text': '➤', 'texthl': 'NeomakeWarningSign' }
-let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign', }
-let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
 " Resize splits automatically
 autocmd VimResized * wincmd =
