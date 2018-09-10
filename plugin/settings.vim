@@ -53,7 +53,7 @@ colorscheme goshgolly
 syntax on
 
 " Attempt to get equal-sized splits
-" set equalalways 
+set equalalways 
 
 " Highlight the cursor line when it's enabled
 set cursorline
@@ -64,7 +64,7 @@ set matchtime=0
 
 " Bash-style tab completion
 set wildmode=longest,full
-set wildignore+=*/tmp/*,*.so,*.zip,*.pyc,node_modules/*
+set wildignore+=*/tmp/*,*.so,*.zip,*.pyc,*node_modules/*
 set wildignore+=*.a,*.o
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png
 set wildignore+=.DS_Store,.git,.hg,.svn
@@ -87,7 +87,7 @@ set smartcase
 set fillchars=vert:\ 
 
 " Improve vim's default completion
-set completeopt=menu,longest
+set completeopt=menuone,noinsert,noselect
 
 " Don't show modes
 set noshowmode
@@ -114,28 +114,32 @@ let g:ctrlp_max_height=6
 let g:ctrlp_use_caching=1
 
 " Make CtrlP use git's cache to index project files (very fast)
-let g:ctrlp_user_command={
-  \ 'types': {
-    \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
-    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-  \ },
-  \ 'fallback': 'ag %s -l --nocolor -g ""',
-  \ 'ignore': 1
-\ }
+" let g:ctrlp_user_command={
+"   \ 'types': {
+"     \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+"     \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+"   \ },
+"   \ 'fallback': 'ag %s -l --nocolor -g ""',
+"   \ 'ignore': 1
+" \ }
 
 let delimitMate_expand_space=1
 let delimitMate_expand_cr=2
 
-let g:deoplete#enable_at_startup=1
-let g:deoplete#auto_complete_delay=0
-let g:deoplete#auto_complete_start_length=2
-" call deoplete#custom#set('_', 'matchers', ['matcher_head'])
+" Automatic completion
+autocmd BufEnter * call ncm2#enable_for_buffer()
+let g:ncm2#complete_length=[[1,2],[7,3]]
 
 let g:vim_json_syntax_conceal=1
+
+let g:ale_sign_column_always=1
+let g:ale_sign_error='‣'
 
 let g:asterisk#keeppos=1
 
 let g:EasyMotion_smartcase=1
+
+let g:gitgutter_enabled=0
 
 " Resize splits automatically
 autocmd VimResized * wincmd =
@@ -144,5 +148,5 @@ autocmd TabEnter * wincmd =
 " Default the filetype to text
 autocmd BufEnter * if &filetype == "" | setlocal ft=txt | endif
 
-let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
-let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+let &t_SI="\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+let &t_EI="\<Esc>]50;CursorShape=0\x7" " Block in normal mode

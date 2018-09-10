@@ -12,10 +12,6 @@ cnorea hh help
 " Reload all buffers
 cnorea eall windo e
 
-" " Fold toggles with space
-" nno <Space> za
-" vno <Space> za
-
 " Quick config access
 no <leader>vv :tabnew $VIMRUNTIME<CR>
 no <leader>vc :tabnew $MYVIMRC<CR>
@@ -32,12 +28,12 @@ no <leader>w :Obsession Session.vim<CR>
 no <leader>f :NERDTreeToggle<CR>
 no <leader>F :NERDTree %
 
-no <leader>s :Ag! <cword><CR>
+no <leader>s :Ag! <cword> expand('%:p:h')<CR>
 
 " Tabs
 no <C-t> :tabnew 
-no <C-p> :tabprev<CR>
 no <C-n> :tabnext<CR>
+no <C-p> :tabprev<CR>
 
 " Split
 no <C-w>v :vsplit 
@@ -46,7 +42,7 @@ no <C-w>s :split
 " Movement
 no <C-j> }
 no <C-k> {
-no <C-h> ^
+no <C-h> <Home>
 no <C-l> $
 
 " Quicker escape
@@ -55,26 +51,47 @@ vno <C-space> <Esc>
 cno <C-space> <C-c>
 
 " Fugitive
-no <leader>gc :Gcommit %<CR>
-no <leader>gC :Gcommit<CR>
+no <leader>gC :Gcommit %<CR>
+no <leader>gc :Gcommit<CR>
 no <leader>gd :Gdiff<CR>
 no <leader>gs :Gstatus<CR>
 no <leader>gb :Gblame<CR>
 no <leader>ge :Gedit<CR>
 no <leader>gw :Gwrite<CR>
 no <leader>gB :Gbrowse<CR>
-no <leader>gp :Git push<CR>
+" no <leader>gp :Git push<CR>
+no <leader>gp :Dispatch! git push<CR>
 no <leader>gu :Git pull<CR>
 no <leader>gf :Git fetch<CR>
+no <leader>gg :GitGutterToggle<CR>
+
+" no <leader>ga :Git add %:p<CR><CR>
+" no <leader>gs :Gstatus<CR>
+" no <leader>gc :Gcommit -v -q<CR>
+" no <leader>gt :Gcommit -v -q %:p<CR>
+" no <leader>gd :Gdiff<CR>
+" no <leader>ge :Gedit<CR>
+" no <leader>gr :Gread<CR>
+" no <leader>gw :Gwrite<CR><CR>
+" no <leader>gl :silent! Glog<CR>:bot copen<CR>
+" no <leader>gp :Ggrep<Space>
+" no <leader>gm :Gmove<Space>
+" no <leader>gb :Git branch<Space>
+" no <leader>go :Git checkout<Space>
+" no <leader>gps :Dispatch! git push<CR>
+" no <leader>gpl :Dispatch! git pull<CR>
+
 
 " CtrlP
-let g:ctrlp_map='<leader>`'
+let g:ctrlp_map='<Space>'
 
 " Find word under cursor with :Ag
 no <leader>k :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Leader for EasyMotion
 let g:EasyMotion_leader_key = "'"
+nmap s <Plug>(easymotion-s)
+vmap s <Plug>(easymotion-s)
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -101,6 +118,15 @@ map gz# <Plug>(asterisk-gz#)
 " Tab completion
 ino <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 ino <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
+" Buffer shortcuts
+" map gn :bn<cr>
+" map gp :bp<cr>
+map gb :b#<cr>
+
+" Quickfix
+map gn :cn<cr>
+map gp :cp<cr>
 
 " Show syntax highlighting groups for word under cursor
 function! <SID>SynStack()
