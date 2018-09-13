@@ -109,6 +109,8 @@ let NERDTreeStatusline='Files'
 let g:gist_open_browser_after_post=1
 let g:gist_post_private=1
 
+let g:ackprg = 'rg --vimgrep --no-heading --smart-case'
+
 " Have CtrlP ignore this in addition to the wildignore option
 let g:ctrlp_max_height=6
 let g:ctrlp_use_caching=1
