@@ -28,7 +28,7 @@ no <leader>w :Obsession Session.vim<CR>
 no <leader>f :NERDTreeToggle<CR>
 no <leader>F :NERDTree %
 
-no <leader>s :Ag! <cword> expand('%:p:h')<CR>
+no <leader>s :Ack! <cword> expand('%:p:r')<CR>
 
 " Tabs
 no <C-t> :tabnew 
