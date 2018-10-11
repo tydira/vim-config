@@ -137,11 +137,16 @@ let g:vim_json_syntax_conceal=1
 let g:ale_sign_column_always=1
 let g:ale_sign_error='‣'
 
+" Stop fighting with ALE. Doesn't work in the TS ftplugin for some reason.
+let g:nvim_typescript#diagnostics_enable=0
+
 let g:asterisk#keeppos=1
 
 let g:EasyMotion_smartcase=1
 
 let g:gitgutter_enabled=0
+
+let g:node_host_prog = $HOME . '/.local/bin/neovim-node-host'
 
 " Resize splits automatically
 autocmd VimResized * wincmd =
