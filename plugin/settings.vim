@@ -17,12 +17,6 @@ set undofile
 set splitbelow
 set splitright
 
-" Enable basic folding
-" set foldmethod=syntax
-
-" Start with open folds.
-autocmd BufReadPost * normal! zR
-
 " Default file types
 set ffs=unix,dos,mac
 
@@ -83,8 +77,9 @@ set inccommand=nosplit
 set ignorecase
 set smartcase
 
-" There's a space at the end of the next line!
-set fillchars=vert:\ 
+" Get rid of | dividers and ~ buffer fills.
+set fillchars+=vert:\ 
+set fillchars+=eob:\ 
 
 " Improve vim's default completion
 set completeopt=menuone,noinsert,noselect
