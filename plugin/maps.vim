@@ -22,7 +22,7 @@ no <leader>vr :so $MYVIMRC<CR>
 no <leader>/ :let @/=''<CR>
 
 " Write a sessionfile
-no <leader>w :Obsession Session.vim<CR>
+no <leader>w :Obsession .session.vim<CR>
 
 " NERDTree display
 no <leader>f :NERDTreeToggle<CR>

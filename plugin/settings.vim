@@ -3,6 +3,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Don't require save on buffer switch
+set hidden
+
 " Don't update the screen during macros
 set lazyredraw
 
@@ -58,14 +61,14 @@ set matchtime=0
 
 " Bash-style tab completion
 set wildmode=longest,full
-set wildignore+=*/tmp/*,*.so,*.zip,*.pyc,*node_modules/*
+set wildignore+=*/tmp/*,*.so,*.zip,*.pyc,*node_modules/*,*/target/*,*/build/*
 set wildignore+=*.a,*.o
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png
 set wildignore+=.DS_Store,.git,.hg,.svn
 set wildignore+=*~,*.swp,*.tmp
 
 " Short messages, no intro text
-set shortmess+=aI
+set shortmess+=aIc
 
 " Show-as-you-go search
 set hlsearch
@@ -106,19 +109,8 @@ let g:gist_post_private=1
 
 let g:ackprg = 'rg --vimgrep --no-heading --smart-case'
 
-" Have CtrlP ignore this in addition to the wildignore option
 let g:ctrlp_max_height=6
 let g:ctrlp_use_caching=1
-
-" Make CtrlP use git's cache to index project files (very fast)
-" let g:ctrlp_user_command={
-"   \ 'types': {
-"     \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
-"     \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-"   \ },
-"   \ 'fallback': 'ag %s -l --nocolor -g ""',
-"   \ 'ignore': 1
-" \ }
 
 let delimitMate_expand_space=1
 let delimitMate_expand_cr=2
@@ -131,6 +123,7 @@ let g:vim_json_syntax_conceal=1
 
 let g:ale_sign_column_always=1
 let g:ale_sign_error='‣'
+let g:ale_sign_warning='・'
 
 " Stop fighting with ALE. Doesn't work in the TS ftplugin for some reason.
 let g:nvim_typescript#diagnostics_enable=0
