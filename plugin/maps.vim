@@ -51,10 +51,10 @@ vno <C-space> <Esc>
 cno <C-space> <C-c>
 
 " Fugitive
-no <leader>gC :Gcommit %<CR>
-no <leader>gc :Gcommit<CR>
-no <leader>gd :Gdiff<CR>
-no <leader>gs :Gstatus<CR>
+no <leader>gC :vert :Gcommit %<CR>
+no <leader>gc :vert :Gcommit<CR>
+no <leader>gd :vert :Gdiff<CR>
+no <leader>gs :vert :Gstatus<CR>
 no <leader>gb :Gblame<CR>
 no <leader>ge :Gedit<CR>
 no <leader>gw :Gwrite<CR>
