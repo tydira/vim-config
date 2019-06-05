@@ -61,7 +61,7 @@ set matchtime=0
 
 " Bash-style tab completion
 set wildmode=longest,full
-set wildignore+=*/tmp/*,*.so,*.zip,*.pyc,*node_modules/*,*/target/*,*/build/*
+set wildignore+=,*.so,*.zip,*.pyc,
 set wildignore+=*.a,*.o
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png
 set wildignore+=.DS_Store,.git,.hg,.svn
@@ -111,6 +111,7 @@ let g:ackprg = 'rg --vimgrep --no-heading --smart-case'
 
 let g:ctrlp_max_height=6
 let g:ctrlp_use_caching=1
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 let delimitMate_expand_space=1
 let delimitMate_expand_cr=2
