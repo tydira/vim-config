@@ -6,6 +6,8 @@ set noswapfile
 " Don't require save on buffer switch
 set hidden
 
+set switchbuf=vsplit
+
 " Don't update the screen during macros
 set lazyredraw
 
@@ -85,7 +87,7 @@ set fillchars+=vert:\
 set fillchars+=eob:\ 
 
 " Improve vim's default completion
-set completeopt=menuone,noinsert,noselect
+set completeopt=menu,menuone,preview,noselect,noinsert
 
 " Don't show modes
 set noshowmode
@@ -122,7 +124,18 @@ let g:ncm2#complete_length=[[1,2],[7,3]]
 
 let g:vim_json_syntax_conceal=1
 
+let g:ale_list_window_size=6
+let g:ale_completion_enabled=1
 let g:ale_sign_column_always=1
+let g:ale_lint_on_text_changed='normal'
+let g:ale_linters_explicit=1
+
+" Automatically close location lists
+augroup CloseLoclistWindowGroup
+  autocmd!
+  autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
+
 let g:ale_sign_error='‣'
 let g:ale_sign_warning='・'
 
