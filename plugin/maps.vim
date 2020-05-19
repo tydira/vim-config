@@ -28,7 +28,7 @@ no <leader>w :Obsession .session.vim<CR>
 no <leader>f :NERDTreeToggle<CR>
 no <leader>F :NERDTree %
 
-no <leader>s :Ack! <cword> expand('%:p:r')<CR>
+no <leader>s :Ack! <cword><CR>
 
 " Tabs
 no <C-t> :tabnew 
@@ -54,7 +54,7 @@ cno <C-space> <C-c>
 no <leader>gC :vert :Gcommit %<CR>
 no <leader>gc :vert :Gcommit<CR>
 no <leader>gd :vert :Gdiff<CR>
-no <leader>gs :vert :Gstatus<CR>
+no <leader>gs :Gstatus<CR>
 no <leader>gb :Gblame<CR>
 no <leader>ge :Gedit<CR>
 no <leader>gw :Gwrite<CR>
@@ -73,7 +73,7 @@ no <leader>gg :GitGutterToggle<CR>
 " no <leader>ge :Gedit<CR>
 " no <leader>gr :Gread<CR>
 " no <leader>gw :Gwrite<CR><CR>
-" no <leader>gl :silent! Glog<CR>:bot copen<CR>
+no <leader>gl :silent! Glog<CR>:bot copen<CR>
 " no <leader>gp :Ggrep<Space>
 " no <leader>gm :Gmove<Space>
 " no <leader>gb :Git branch<Space>
