@@ -6,8 +6,6 @@ set noswapfile
 " Don't require save on buffer switch
 set hidden
 
-set switchbuf=vsplit
-
 " Don't update the screen during macros
 set lazyredraw
 
@@ -55,7 +53,7 @@ syntax on
 set equalalways 
 
 " Highlight the cursor line when it's enabled
-set cursorline
+" set cursorline
 
 " Show matching brace highlights
 set showmatch
@@ -112,8 +110,9 @@ let g:gist_post_private=1
 let g:ackprg = 'rg --vimgrep --no-heading --smart-case'
 
 let g:ctrlp_max_height=6
-let g:ctrlp_use_caching=1
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" let g:ctrlp_use_caching=1
+let g:ctrlp_custom_ignore = '\v[\/]node_modules'
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 let delimitMate_expand_space=1
 let delimitMate_expand_cr=2
@@ -125,10 +124,10 @@ let g:ncm2#complete_length=[[1,2],[7,3]]
 let g:vim_json_syntax_conceal=1
 
 let g:ale_list_window_size=6
-let g:ale_completion_enabled=1
+let g:ale_completion_enabled=0
 let g:ale_sign_column_always=1
 let g:ale_lint_on_text_changed='normal'
-let g:ale_linters_explicit=1
+" let g:ale_linters_explicit=1
 
 " Automatically close location lists
 augroup CloseLoclistWindowGroup
@@ -141,6 +140,7 @@ let g:ale_sign_warning='・'
 
 " Stop fighting with ALE. Doesn't work in the TS ftplugin for some reason.
 let g:nvim_typescript#diagnostics_enable=0
+let g:nvim_typescript#quiet_startup=1
 
 let g:asterisk#keeppos=1
 
