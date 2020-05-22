@@ -28,8 +28,6 @@ no <leader>w :Obsession .session.vim<CR>
 no <leader>f :NERDTreeToggle<CR>
 no <leader>F :NERDTree %
 
-no <leader>s :Ack! <cword><CR>
-
 " Tabs
 no <C-t> :tabnew 
 no <C-n> :tabnext<CR>
@@ -40,8 +38,6 @@ no <C-w>v :vsplit
 no <C-w>s :split 
 
 " Movement
-no <C-j> }
-no <C-k> {
 no <C-h> <Home>
 no <C-l> $
 
@@ -86,10 +82,9 @@ no <leader>gl :silent! Glog<CR>:bot copen<CR>
 let g:ctrlp_map='<Space>'
 
 " Find word under cursor with :Ag
-no <leader>k :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
+no <leader>k :Ack! <cword><CR>
 
 " Leader for EasyMotion
-let g:EasyMotion_leader_key = "'"
 nmap s <Plug>(easymotion-s)
 vmap s <Plug>(easymotion-s)
 

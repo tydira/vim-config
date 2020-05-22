@@ -150,6 +150,10 @@ let g:gitgutter_enabled=0
 
 let g:node_host_prog = $HOME . '/.local/bin/neovim-node-host'
 
+let g:Illuminate_delay = 0
+let g:Illuminate_highlightUnderCursor = 0
+let g:Illuminate_ftblacklist = ['nerdtree']
+
 " Resize splits automatically
 autocmd VimResized * wincmd =
 autocmd TabEnter * wincmd =
@@ -161,6 +165,5 @@ let &t_SI="\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
 let &t_EI="\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 
 " May be needed to enable italics in vim
-" let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
