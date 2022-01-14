@@ -1,5 +1,5 @@
 set laststatus=2
-set statusline=%f%#Error#%R%*
+set statusline=%f\ %#Special#%(%{FugitiveHead()}%)%=%(%#Error#%R%)%*
 
 if exists("+showtabline")
   function! MyTabLine()
@@ -39,26 +39,16 @@ if exists("+showtabline")
 
     return s
   endfunction
+
   set tabline=%!MyTabLine()
 endif
 
-fu! CtrlP_Statusline_1(...)
-  let dir = '%#Comment#'.getcwd().'%='
-  let byfname = ' '.a:2
-  let regex = a:3 ? ' regex' : ''
-  let item = '/'.a:5
+" Cleaner fzf
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 signcolumn=no noruler noshowcmd
+  \| autocmd BufLeave <buffer> set laststatus=2 signcolumn=yes noruler showcmd
 
-  retu dir.byfname.regex.item
-endf
-
-fu! CtrlP_Statusline_2(...)
-  let len = '%#Comment# '.a:1.' %*'
-  let dir = ' %=%<%#Comment# '.getcwd().' %*'
-
-  retu len.dir
-endf
-
-let g:ctrlp_status_func = {
-  \ 'main': 'CtrlP_Statusline_1',
-  \ 'prog': 'CtrlP_Statusline_2',
-  \ }
+" Cleaner qf
+autocmd! FileType qf
+autocmd  FileType qf set laststatus=0 signcolumn=no noruler noshowcmd
+  \| autocmd BufLeave <buffer> set laststatus=2 signcolumn=yes noruler showcmd
